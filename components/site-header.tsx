@@ -45,40 +45,38 @@ export function SiteHeader() {
   return (
     <>
       <header className="border-site-border bg-site-header/80 fixed inset-x-0 top-0 z-50 border-b backdrop-blur-md">
-        <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-6 lg:h-14">
-          <div className="flex items-center gap-2 lg:w-full lg:justify-between">
-            <div className="flex items-center gap-2 lg:order-2">
-              <ThemeToggle />
-              <button
-                type="button"
-                className="text-site-body hover:text-site-heading rounded-lg p-2 transition-colors lg:hidden"
-                aria-expanded={menuOpen}
-                aria-controls="mobile-nav"
-                aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-                onClick={toggleMenu}
+        <div className="relative mx-auto flex h-14 max-w-5xl items-center justify-center px-6">
+          <nav
+            aria-label="Primary"
+            className="hidden items-center gap-8 lg:flex"
+          >
+            {navItems.map((item) => (
+              <a
+                key={item.id}
+                href={`#${item.id}`}
+                className="text-site-body hover:text-site-heading font-mono text-sm transition-colors"
               >
-                {menuOpen ? (
-                  <CloseIcon className="size-4" />
-                ) : (
-                  <MenuIcon className="size-4" />
-                )}
-              </button>
-            </div>
+                {item.label}
+              </a>
+            ))}
+          </nav>
 
-            <nav
-              aria-label="Primary"
-              className="hidden items-center gap-8 lg:order-1 lg:flex"
+          <div className="absolute right-6 flex items-center gap-2">
+            <ThemeToggle />
+            <button
+              type="button"
+              className="text-site-body hover:text-site-heading rounded-lg p-2 transition-colors lg:hidden"
+              aria-expanded={menuOpen}
+              aria-controls="mobile-nav"
+              aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+              onClick={toggleMenu}
             >
-              {navItems.map((item) => (
-                <a
-                  key={item.id}
-                  href={`#${item.id}`}
-                  className="text-site-body hover:text-site-heading font-sans text-sm transition-colors"
-                >
-                  {item.label}
-                </a>
-              ))}
-            </nav>
+              {menuOpen ? (
+                <CloseIcon className="size-4" />
+              ) : (
+                <MenuIcon className="size-4" />
+              )}
+            </button>
           </div>
         </div>
       </header>
@@ -96,7 +94,7 @@ export function SiteHeader() {
               <a
                 key={item.id}
                 href={`#${item.id}`}
-                className="text-site-heading font-sans text-lg"
+                className="text-site-heading font-mono text-lg"
                 onClick={closeMenu}
               >
                 {item.label}
