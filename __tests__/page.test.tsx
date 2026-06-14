@@ -5,7 +5,7 @@ import Page from '../app/page'
 
 function renderPage() {
   return render(
-    <ThemeProvider>
+    <ThemeProvider initialTheme="dark">
       <Page />
     </ThemeProvider>
   )

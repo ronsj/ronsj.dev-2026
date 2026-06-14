@@ -4,11 +4,11 @@ import {
   createContext,
   useCallback,
   useContext,
+  useLayoutEffect,
   useMemo,
   useState,
 } from 'react'
-
-type Theme = 'light' | 'dark'
+import { THEME_COOKIE, themeCookieValue, type Theme } from '@/lib/theme'
 
 type ThemeContextValue = {
   theme: Theme
@@ -17,31 +17,56 @@ type ThemeContextValue = {
 
 const ThemeContext = createContext<ThemeContextValue | null>(null)
 
-function getStoredTheme(): Theme | null {
-  try {
-    return window.localStorage.getItem('theme') === 'light' ? 'light' : null
-  } catch {
-    return null
-  }
-}
-
 function applyTheme(theme: Theme) {
   document.documentElement.classList.toggle('dark', theme === 'dark')
   document.documentElement.style.colorScheme = theme
 }
 
-export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>(() => getStoredTheme() ?? 'dark')
+function persistTheme(theme: Theme) {
+  applyTheme(theme)
+  try {
+    window.localStorage.setItem(THEME_COOKIE, theme)
+    document.cookie = themeCookieValue(theme)
+  } catch {
+    // Ignore storage failures in restricted environments.
+  }
+}
+
+function readStoredTheme(): Theme | null {
+  try {
+    const stored = window.localStorage.getItem(THEME_COOKIE)
+    if (stored === 'light' || stored === 'dark') return stored
+  } catch {
+    // Ignore storage failures in restricted environments.
+  }
+  return null
+}
+
+export function ThemeProvider({
+  children,
+  initialTheme,
+}: {
+  children: React.ReactNode
+  initialTheme: Theme
+}) {
+  const [theme, setTheme] = useState<Theme>(initialTheme)
+
+  useLayoutEffect(() => {
+    const storedTheme = readStoredTheme()
+
+    if (storedTheme && storedTheme !== initialTheme) {
+      persistTheme(storedTheme)
+      queueMicrotask(() => setTheme(storedTheme))
+      return
+    }
+
+    applyTheme(initialTheme)
+  }, [initialTheme])
 
   const toggleTheme = useCallback(() => {
     setTheme((current) => {
       const next = current === 'dark' ? 'light' : 'dark'
-      try {
-        window.localStorage.setItem('theme', next)
-      } catch {
-        // Ignore storage failures in restricted environments.
-      }
-      applyTheme(next)
+      persistTheme(next)
       return next
     })
   }, [])
