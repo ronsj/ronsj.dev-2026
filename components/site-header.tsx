@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useCallback, useState } from 'react'
 import { navItems } from '@/lib/portfolio-data'
 import { CloseIcon, MenuIcon, MoonIcon, SunIcon } from '@/components/icons'
 import { useTheme } from '@/components/theme-provider'
@@ -29,12 +29,18 @@ function ThemeToggle() {
 export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false)
 
-  useEffect(() => {
-    document.body.style.overflow = menuOpen ? 'hidden' : ''
-    return () => {
-      document.body.style.overflow = ''
-    }
-  }, [menuOpen])
+  const toggleMenu = useCallback(() => {
+    setMenuOpen((open) => {
+      const next = !open
+      document.body.style.overflow = next ? 'hidden' : ''
+      return next
+    })
+  }, [])
+
+  const closeMenu = useCallback(() => {
+    document.body.style.overflow = ''
+    setMenuOpen(false)
+  }, [])
 
   return (
     <>
@@ -49,7 +55,7 @@ export function SiteHeader() {
                 aria-expanded={menuOpen}
                 aria-controls="mobile-nav"
                 aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-                onClick={() => setMenuOpen((open) => !open)}
+                onClick={toggleMenu}
               >
                 {menuOpen ? (
                   <CloseIcon className="size-4" />
@@ -91,7 +97,7 @@ export function SiteHeader() {
                 key={item.id}
                 href={`#${item.id}`}
                 className="text-site-heading font-sans text-lg"
-                onClick={() => setMenuOpen(false)}
+                onClick={closeMenu}
               >
                 {item.label}
               </a>
