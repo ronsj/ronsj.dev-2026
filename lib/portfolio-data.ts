@@ -6,7 +6,7 @@ export const navItems = [
 ] as const
 
 export const hero = {
-  label: 'Front End Engineer',
+  label: 'Frontend Engineer | UX Enthusiast',
   name: 'Ron San Jose',
   summary:
     'I build fast, accessible, and beautifully crafted interfaces. Six years of shipping production React at companies where UI quality is a first-class concern.',
@@ -17,8 +17,8 @@ export const hero = {
 
 export const about = {
   paragraphs: [
-    "I'm a Front End Engineer with a sharp eye for detail and a long track record of shipping interfaces people love to use. My work sits at the intersection of engineering rigour and design sensibility.",
-    "I care deeply about performance, accessibility, and the craft of building component systems that scale. I've led front end chapters at two growth-stage startups and contributed to open-source projects with 10k+ GitHub stars.",
+    "I'm a Frontend Engineer with a sharp eye for detail and a long track record of shipping interfaces people love to use. My work sits at the intersection of engineering rigour and design sensibility.",
+    "I care deeply about performance, accessibility, and the craft of building component systems that scale. I've led Frontend chapters at two growth-stage startups and contributed to open-source projects with 10k+ GitHub stars.",
     'Outside of work I write about CSS architecture on my blog, occasionally speak at React conferences, and maintain a small open-source animation library.',
   ],
   stats: [
@@ -110,14 +110,14 @@ export const projects = [
 
 export const experience = [
   {
-    title: 'Senior Front End Engineer',
+    title: 'Senior Frontend Engineer',
     company: 'Vercel',
     period: '2022 — Present',
     description:
       "Lead the redesign of the dashboard's core navigation and analytics views. Reduced bundle size by 42% through code-splitting and tree-shaking audits.",
   },
   {
-    title: 'Front End Engineer',
+    title: 'Frontend Engineer',
     company: 'Linear',
     period: '2020 — 2022',
     description:

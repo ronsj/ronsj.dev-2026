@@ -21,9 +21,9 @@ const jetBrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Ron San Jose — Front End Engineer',
+  title: 'Ron San Jose — Frontend Engineer',
   description:
-    'Portfolio of Ron San Jose, a Front End Engineer focused on fast, accessible React interfaces.',
+    'Portfolio of Ron San Jose, a Frontend Engineer focused on fast, accessible React interfaces.',
 }
 
 export default function RootLayout({
