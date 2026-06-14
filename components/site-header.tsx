@@ -3,7 +3,7 @@
 import { useCallback, useState } from 'react'
 import { navItems } from '@/lib/portfolio-data'
 import { CloseIcon, MenuIcon, MoonIcon, SunIcon } from '@/components/icons'
-import { useTheme } from '@/components/theme-provider'
+import { useTheme } from '@/lib/use-theme'
 
 function ThemeToggle() {
   const { theme, toggleTheme } = useTheme()
