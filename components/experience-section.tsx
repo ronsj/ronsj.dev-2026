@@ -1,0 +1,40 @@
+import { experience } from '@/lib/portfolio-data'
+import { SectionLabel } from '@/components/ui'
+
+export function ExperienceSection() {
+  return (
+    <section
+      id="experience"
+      className="border-site-border scroll-mt-24 border-t py-16 lg:py-16.25"
+    >
+      <div className="mx-auto max-w-5xl px-6">
+        <SectionLabel>Experience</SectionLabel>
+
+        <div className="divide-site-border mt-8 divide-y">
+          {experience.map((role) => (
+            <article
+              key={role.title + role.company}
+              className="py-8 first:pt-0"
+            >
+              <div className="flex flex-col gap-1 lg:flex-row lg:items-start lg:justify-between">
+                <h3 className="font-display text-site-heading text-base">
+                  {role.title}
+                  <span className="text-site-accent"> · </span>
+                  <span className="text-site-body font-sans text-sm">
+                    {role.company}
+                  </span>
+                </h3>
+                <p className="text-site-body font-mono text-xs lg:text-right">
+                  {role.period}
+                </p>
+              </div>
+              <p className="text-site-body mt-3 max-w-2xl text-sm/relaxed">
+                {role.description}
+              </p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}

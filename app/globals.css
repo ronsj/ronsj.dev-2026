@@ -1,27 +1,54 @@
 @import 'tailwindcss';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --site-bg: #f5f3ee;
+  --site-surface: #edeae3;
+  --site-tag: #e4e0d8;
+  --site-accent: #2a9d8f;
+  --site-heading: #1a1a1e;
+  --site-body: #6b6b78;
+  --site-cta: #ffffff;
+  --site-border: rgba(0, 0, 0, 0.1);
+  --site-header: rgba(245, 243, 238, 0.8);
+  color-scheme: light;
+}
+
+.dark {
+  --site-bg: #161618;
+  --site-surface: #1c1c1f;
+  --site-tag: #1e1e23;
+  --site-accent: #5ec4b6;
+  --site-heading: #e8e6e1;
+  --site-body: #8a8a9a;
+  --site-cta: #0d0d0f;
+  --site-border: rgba(255, 255, 255, 0.08);
+  --site-header: rgba(22, 22, 24, 0.8);
+  color-scheme: dark;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-site-bg: var(--site-bg);
+  --color-site-surface: var(--site-surface);
+  --color-site-tag: var(--site-tag);
+  --color-site-accent: var(--site-accent);
+  --color-site-heading: var(--site-heading);
+  --color-site-body: var(--site-body);
+  --color-site-cta: var(--site-cta);
+  --color-site-border: var(--site-border);
+  --color-site-header: var(--site-header);
   --font-sans: var(--font-inter);
   --font-mono: var(--font-jetbrains-mono);
   --font-display: var(--font-playfair-display);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--site-bg);
+  color: var(--site-body);
+  font-family: var(--font-inter), sans-serif;
 }
