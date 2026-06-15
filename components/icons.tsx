@@ -62,22 +62,15 @@ export function ExternalLinkIcon({ className }: IconProps) {
   return (
     <svg
       className={className}
-      viewBox="0 0 15 15"
+      viewBox="0 0 24 24"
       fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
       aria-hidden="true"
     >
-      <path
-        d="M5.625 2.5H3.125A.625.625 0 0 0 2.5 3.125v9.375c0 .345.28.625.625.625h9.375a.625.625 0 0 0 .625-.625V10.625"
-        stroke="currentColor"
-        strokeWidth="1.1"
-      />
-      <path
-        d="M7.5 2.5h5v5M12.5 2.5 6.875 8.125"
-        stroke="currentColor"
-        strokeWidth="1.1"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
+      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3" />
     </svg>
   )
 }
