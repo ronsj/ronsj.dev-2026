@@ -129,7 +129,11 @@ export const experience = [
 ]
 
 export const footer = {
-  tagline: "Let's mosey.",
+  tagline: [
+    `Checkin' my email, checkin' my email, checkin-checkin-checkin' my email.`,
+    `Let's mosey.`,
+    `This is the way.`,
+  ],
   email: hero.email,
   github: hero.github,
   linkedin: hero.linkedin,
