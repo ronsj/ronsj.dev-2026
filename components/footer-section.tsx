@@ -1,22 +1,12 @@
 import { footer } from '@/lib/portfolio-data'
 import { GitHubIcon, LinkedInIcon } from '@/components/icons'
 
-function pickFooterTagline(): string {
-  return footer.tagline[Math.floor(Math.random() * footer.tagline.length)]!
-}
-
 export function FooterSection() {
-  const randomTagline = pickFooterTagline()
-
   return (
     <footer className="border-site-border border-t py-16">
       <div className="mx-auto flex max-w-5xl flex-col gap-6 px-6 lg:flex-row lg:items-end lg:justify-between">
         <div>
-          <p className="text-site-body font-sans text-sm italic">
-            &ldquo;
-            {randomTagline}
-            &rdquo;
-          </p>
+          <p className="text-sm">👋</p>
         </div>
 
         <div className="flex flex-wrap items-center gap-5">
