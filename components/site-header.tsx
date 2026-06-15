@@ -1,9 +1,11 @@
 'use client'
 
-import { useCallback, useState } from 'react'
-import { navItems } from '@/lib/portfolio-data'
+import { useCallback, useEffect, useState } from 'react'
+import { hero, navItems } from '@/lib/portfolio-data'
 import { CloseIcon, MenuIcon, MoonIcon, SunIcon } from '@/components/icons'
 import { useTheme } from '@/lib/use-theme'
+
+const HEADER_HEIGHT_PX = 56
 
 function ThemeToggle() {
   const { theme, toggleTheme } = useTheme()
@@ -28,6 +30,25 @@ function ThemeToggle() {
 
 export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [showCompactTitle, setShowCompactTitle] = useState(false)
+
+  useEffect(() => {
+    const heroTitle = document.getElementById('hero-title')
+    if (!heroTitle || typeof IntersectionObserver === 'undefined') return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setShowCompactTitle(!entry.isIntersecting)
+      },
+      {
+        rootMargin: `-${HEADER_HEIGHT_PX}px 0px 0px 0px`,
+        threshold: 0,
+      }
+    )
+
+    observer.observe(heroTitle)
+    return () => observer.disconnect()
+  }, [])
 
   const toggleMenu = useCallback(() => {
     setMenuOpen((open) => {
@@ -46,6 +67,17 @@ export function SiteHeader() {
     <>
       <header className="border-site-border bg-site-header/80 fixed inset-x-0 top-0 z-50 border-b backdrop-blur-md">
         <div className="relative mx-auto flex h-14 max-w-5xl items-center justify-center px-6">
+          <a
+            href="#"
+            className={`text-site-accent absolute left-6 max-w-[40%] truncate font-mono text-sm transition-opacity duration-200 hover:opacity-80 motion-reduce:transition-none sm:max-w-[45%] ${
+              showCompactTitle ? 'opacity-100' : 'pointer-events-none opacity-0'
+            }`}
+            aria-hidden={!showCompactTitle}
+            tabIndex={showCompactTitle ? 0 : -1}
+          >
+            {hero.name}
+          </a>
+
           <nav
             aria-label="Primary"
             className="hidden items-center gap-8 lg:flex"

@@ -12,7 +12,10 @@ export function HeroSection() {
           {hero.label}
         </p>
 
-        <h1 className="font-display text-site-heading text-box-trim-both text-box-edge-cap-alpha mt-8 text-5xl/none font-bold tracking-tight lg:text-8xl/tight lg:tracking-tight">
+        <h1
+          id="hero-title"
+          className="font-display text-site-heading text-box-trim-both text-box-edge-cap-alpha mt-8 text-5xl/none font-bold tracking-tight lg:text-8xl/tight lg:tracking-tight"
+        >
           {hero.name}
         </h1>
 
