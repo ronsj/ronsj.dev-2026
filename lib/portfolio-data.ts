@@ -81,15 +81,14 @@ export const projects = [
   {
     title: 'Next.js Starter Kit',
     description:
-      'My current go-to starter kit for new front end Next.js projects.',
+      'My current go-to starter kit for new front end Next.js projects. Includes my preferred tech stack and development workflows.',
     tags: [
       'React',
       'TypeScript',
       'Next.js',
       'Tailwind CSS',
-      'Playwright',
-      'Vitest',
-      'Testing Library',
+      'E2E Testing',
+      'Unit Testing',
       'GitHub Actions',
       'CI',
     ],
