@@ -17,10 +17,10 @@ export function SkillsSection() {
               className="flex flex-col gap-3 sm:flex-row sm:items-start sm:gap-3"
             >
               {/* give this a line height near 28px */}
-              <h3 className="text-site-body text-label w-24 shrink-0 font-mono leading-7 tracking-widest uppercase">
+              <h3 className="text-site-body w-24 shrink-0 font-mono text-xs tracking-widest lg:leading-7">
                 {group.category}
               </h3>
-              <ul className="flex flex-wrap gap-2">
+              <ul className="flex flex-wrap gap-2 pl-2 lg:pl-0">
                 {group.items.map((item) => (
                   <li
                     key={item}
