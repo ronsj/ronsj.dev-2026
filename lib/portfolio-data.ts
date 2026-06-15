@@ -5,14 +5,17 @@ export const navItems = [
   { id: 'experience', label: 'Experience' },
 ] as const
 
+const myName = 'Ron San Jose'
+const githubUrl = 'https://github.com/ronsj'
+const linkedinUrl = 'https://linkedin.com/in/ronsanjose'
+
 export const hero = {
   label: 'Frontend Engineer',
-  name: 'Ron San Jose',
+  name: myName,
   summary:
     'I build fast, accessible, and beautifully crafted interfaces. Six years of shipping production React at companies where UI quality is a first-class concern.',
-  email: 'ronsj1@gmail.com',
-  github: 'https://github.com/ronsj',
-  linkedin: 'https://linkedin.com/in/ronsanjose',
+  github: githubUrl,
+  linkedin: linkedinUrl,
 }
 
 export const about = {
@@ -24,10 +27,10 @@ export const about = {
   stats: [
     { label: 'Location', value: 'Torrance, CA' },
     { label: 'Experience', value: '10+ years' },
-    { label: 'Focus', value: 'React, TypeScript, UX, Performance' },
+    { label: 'Focus', value: 'Frontend, APIs, Performance, a11y, UX' },
     {
       label: 'Open to',
-      value: 'Mid-Senior roles. Remote or on-site.',
+      value: 'Mid-senior roles, remote or on-site',
     },
   ],
 }
@@ -134,8 +137,7 @@ export const footer = {
     `Let's mosey.`,
     `This is the way.`,
   ],
-  email: hero.email,
-  github: hero.github,
-  linkedin: hero.linkedin,
-  copyright: '© 2026 Ron San Jose',
+  github: githubUrl,
+  linkedin: linkedinUrl,
+  copyright: `${myName}`,
 }
