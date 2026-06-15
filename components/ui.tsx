@@ -1,6 +1,6 @@
 export function SectionLabel({ children }: { children: string }) {
   return (
-    <p className="text-site-accent font-mono text-[0.6875rem] tracking-widest uppercase">
+    <p className="text-site-accent text-label font-mono tracking-widest uppercase">
       {children}
     </p>
   )
@@ -12,7 +12,7 @@ export function TagList({ tags }: { tags: string[] }) {
       {tags.map((tag) => (
         <li
           key={tag}
-          className="bg-site-tag text-site-body rounded-md px-2 py-0.5 font-mono text-[0.6875rem]"
+          className="bg-site-tag text-site-body text-label rounded-md px-2 py-0.5 font-mono"
         >
           {tag}
         </li>

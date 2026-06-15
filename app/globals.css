@@ -41,6 +41,9 @@
   --font-sans: var(--font-inter);
   --font-mono: var(--font-jetbrains-mono);
   --font-display: var(--font-playfair-display);
+  --text-label: 0.6875rem;
+  --max-width-about-copy: 35.375rem;
+  --max-width-about-stats: 22.625rem;
 }
 
 html {
@@ -51,4 +54,12 @@ body {
   background: var(--site-bg);
   color: var(--site-body);
   font-family: var(--font-inter), sans-serif;
+}
+
+.text-box-trim-both {
+  text-box: trim both;
+}
+
+.text-box-edge-cap-alpha {
+  text-box-edge: cap alphabetic;
 }

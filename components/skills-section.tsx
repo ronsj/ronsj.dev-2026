@@ -5,7 +5,7 @@ export function SkillsSection() {
   return (
     <section
       id="skills"
-      className="border-site-border scroll-mt-24 border-t py-16 lg:py-16.25"
+      className="border-site-border scroll-mt-24 border-t py-16"
     >
       <div className="mx-auto max-w-5xl px-6">
         <SectionLabel>Skills</SectionLabel>
@@ -16,7 +16,7 @@ export function SkillsSection() {
               key={group.category}
               className="flex flex-col gap-3 sm:flex-row sm:items-start sm:gap-3"
             >
-              <h3 className="text-site-accent w-24 shrink-0 font-mono text-[0.65rem] tracking-widest uppercase">
+              <h3 className="text-site-accent text-label w-24 shrink-0 font-mono tracking-widest uppercase">
                 {group.category}
               </h3>
               <ul className="flex flex-wrap gap-2">

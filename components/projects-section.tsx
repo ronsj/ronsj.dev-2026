@@ -6,7 +6,7 @@ export function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="border-site-border scroll-mt-24 border-t py-16 lg:py-16.25"
+      className="border-site-border scroll-mt-24 border-t py-16"
     >
       <div className="mx-auto max-w-5xl px-6">
         <SectionLabel>Projects</SectionLabel>

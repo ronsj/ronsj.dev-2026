@@ -3,7 +3,7 @@ import { ArrowUpRightIcon, GitHubIcon, LinkedInIcon } from '@/components/icons'
 
 export function FooterSection() {
   return (
-    <footer className="border-site-border border-t py-16 lg:py-16.25">
+    <footer className="border-site-border border-t py-16">
       <div className="mx-auto flex max-w-5xl flex-col gap-6 px-6 lg:flex-row lg:items-end lg:justify-between">
         <div>
           <p className="font-display text-site-heading text-base">
@@ -37,7 +37,7 @@ export function FooterSection() {
           >
             <LinkedInIcon className="size-4.5" />
           </a>
-          <p className="text-site-body font-mono text-[0.6875rem]">
+          <p className="text-site-body text-label font-mono">
             {footer.copyright}
           </p>
         </div>
