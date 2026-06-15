@@ -75,14 +75,14 @@ export function SiteHeader() {
         <div className="relative mx-auto flex h-14 max-w-5xl items-center justify-center px-6">
           <a
             href="#"
-            className={`text-site-accent absolute left-6 rounded-lg p-4 pl-0 transition-opacity duration-200 hover:opacity-80 motion-reduce:transition-none ${
+            className={`text-site-body absolute left-6 rounded-lg p-4 pl-0 transition-opacity duration-200 hover:opacity-80 motion-reduce:transition-none ${
               showCompactTitle ? 'opacity-100' : 'pointer-events-none opacity-0'
             }`}
             aria-hidden={!showCompactTitle}
             aria-label="Back to top"
             tabIndex={showCompactTitle ? 0 : -1}
           >
-            <ArrowUpIcon className="size-4" />
+            <ArrowUpIcon className="size-5" />
           </a>
 
           <nav
@@ -104,16 +104,16 @@ export function SiteHeader() {
             <ThemeToggle />
             <button
               type="button"
-              className="text-site-body hover:text-site-heading rounded-lg p-2 transition-colors lg:hidden"
+              className="text-site-body hover:text-site-heading rounded-lg py-2 pr-0 pl-4 transition-colors lg:hidden"
               aria-expanded={menuOpen}
               aria-controls="mobile-nav"
               aria-label={menuOpen ? 'Close menu' : 'Open menu'}
               onClick={toggleMenu}
             >
               {menuOpen ? (
-                <CloseIcon className="size-4" />
+                <CloseIcon className="size-5" />
               ) : (
-                <MenuIcon className="size-4" />
+                <MenuIcon className="size-5" />
               )}
             </button>
           </div>
