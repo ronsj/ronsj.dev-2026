@@ -1,8 +1,14 @@
 'use client'
 
 import { useCallback, useEffect, useState } from 'react'
-import { hero, navItems } from '@/lib/portfolio-data'
-import { CloseIcon, MenuIcon, MoonIcon, SunIcon } from '@/components/icons'
+import { navItems } from '@/lib/portfolio-data'
+import {
+  ArrowUpIcon,
+  CloseIcon,
+  MenuIcon,
+  MoonIcon,
+  SunIcon,
+} from '@/components/icons'
 import { useTheme } from '@/lib/use-theme'
 
 const HEADER_HEIGHT_PX = 56
@@ -69,13 +75,14 @@ export function SiteHeader() {
         <div className="relative mx-auto flex h-14 max-w-5xl items-center justify-center px-6">
           <a
             href="#"
-            className={`text-site-accent absolute left-6 max-w-[40%] truncate font-mono text-sm transition-opacity duration-200 hover:opacity-80 motion-reduce:transition-none sm:max-w-[45%] ${
+            className={`text-site-accent absolute left-6 rounded-lg p-4 pl-0 transition-opacity duration-200 hover:opacity-80 motion-reduce:transition-none ${
               showCompactTitle ? 'opacity-100' : 'pointer-events-none opacity-0'
             }`}
             aria-hidden={!showCompactTitle}
+            aria-label="Back to top"
             tabIndex={showCompactTitle ? 0 : -1}
           >
-            {hero.name}
+            <ArrowUpIcon className="size-4" />
           </a>
 
           <nav

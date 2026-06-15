@@ -76,6 +76,25 @@ export function ExternalLinkIcon({ className }: IconProps) {
   )
 }
 
+export function ArrowUpIcon({ className }: IconProps) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 16 16"
+      fill="none"
+      aria-hidden="true"
+    >
+      <path
+        d="M8 12.75V3.25M8 3.25 4.25 7M8 3.25l3.75 3.75"
+        stroke="currentColor"
+        strokeWidth="1.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+
 export function ArrowUpRightIcon({ className }: IconProps) {
   return (
     <svg
