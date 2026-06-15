@@ -26,8 +26,14 @@ test('home page renders primary navigation links', () => {
   expect(screen.getByRole('link', { name: 'Experience' })).toBeDefined()
 })
 
-test('home page renders get in touch link', () => {
+test('home page renders GitHub link', () => {
   renderPage()
 
-  expect(screen.getByRole('link', { name: 'Get in touch' })).toBeDefined()
+  expect(screen.getByRole('link', { name: 'GitHub' })).toBeDefined()
+})
+
+test('home page renders LinkedIn link', () => {
+  renderPage()
+
+  expect(screen.getByRole('link', { name: 'LinkedIn' })).toBeDefined()
 })
