@@ -5,13 +5,8 @@ function pickFooterTagline(): string {
   return footer.tagline[Math.floor(Math.random() * footer.tagline.length)]!
 }
 
-function getCurrentYear(): number {
-  return new Date().getFullYear()
-}
-
 export function FooterSection() {
   const randomTagline = pickFooterTagline()
-  const currentYear = getCurrentYear()
 
   return (
     <footer className="border-site-border border-t py-16">
@@ -44,8 +39,8 @@ export function FooterSection() {
             <LinkedInIcon className="size-4.5" />
           </a>
           <p className="text-site-body font-sans text-sm capitalize">
-            <span>&copy; {currentYear} </span>
-            {footer.copyright}
+            <span>&copy; </span>
+            2026 {footer.copyright}
           </p>
         </div>
       </div>
