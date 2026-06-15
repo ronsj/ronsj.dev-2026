@@ -14,13 +14,12 @@ export function SkillsSection() {
           {skills.map((group) => (
             <div
               key={group.category}
-              className="flex flex-col gap-3 sm:flex-row sm:items-start sm:gap-3"
+              className="flex flex-col gap-4 sm:flex-row sm:items-start"
             >
-              {/* give this a line height near 28px */}
-              <h3 className="text-site-body w-24 shrink-0 font-mono text-xs tracking-widest lg:leading-7">
+              <h3 className="text-site-body w-24 shrink-0 font-mono text-xs lg:w-32 lg:leading-7">
                 {group.category}
               </h3>
-              <ul className="flex flex-wrap gap-2 pl-2 lg:pl-0">
+              <ul className="flex flex-wrap gap-2 pl-2 lg:gap-2 lg:pl-0">
                 {group.items.map((item) => (
                   <li
                     key={item}
