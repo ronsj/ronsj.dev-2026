@@ -1,0 +1,16 @@
+---
+description: Use Tailwind v4 canonical utility classes
+globs: **/*.{tsx,jsx,css}
+alwaysApply: false
+---
+
+# Tailwind canonical classes
+
+When writing or editing Tailwind classes:
+
+- Prefer theme tokens from the project's CSS (`@theme`, CSS variables) over hex and arbitrary colors
+- Prefer scale utilities (`mt-4`, `rounded-lg`, `border-black/10`) over arbitrary values (`mt-[16px]`, `border-black/[.08]`)
+- Use v4 canonical names (`shrink-0`, `bg-linear-to-r`) not legacy v3 aliases (`flex-shrink-0`, `bg-gradient-to-r`)
+- When touching non-canonical classes, convert them if a close match exists
+
+For alias tables and audit steps, read `.agents/skills/tailwind-canonical-classes/SKILL.md`.
