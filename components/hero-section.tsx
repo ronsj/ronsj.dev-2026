@@ -25,13 +25,6 @@ export function HeroSection() {
 
         <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center lg:gap-5">
           <a
-            href={`mailto:${hero.email}`}
-            className="bg-site-accent text-site-cta border-site-accent lg:border-site-bg inline-flex items-center justify-center gap-2 rounded-md border px-5 py-2.5 font-mono text-base transition-opacity hover:opacity-90"
-          >
-            <MailIcon className="size-3.5" />
-            Get in touch
-          </a>
-          <a
             href={hero.github}
             target="_blank"
             rel="noopener noreferrer"
