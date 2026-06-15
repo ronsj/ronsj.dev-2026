@@ -12,17 +12,14 @@ const linkedinUrl = 'https://linkedin.com/in/ronsanjose'
 export const hero = {
   label: 'Frontend Engineer',
   name: myName,
-  summary:
-    'I build fast, accessible, and beautifully crafted interfaces. Six years of shipping production React at companies where UI quality is a first-class concern.',
+  summary: '',
   github: githubUrl,
   linkedin: linkedinUrl,
 }
 
 export const about = {
   paragraphs: [
-    "I'm a Frontend Engineer with a sharp eye for detail and a long track record of shipping interfaces people love to use. My work sits at the intersection of engineering rigour and design sensibility.",
-    "I care deeply about performance, accessibility, and the craft of building component systems that scale. I've led Frontend chapters at two growth-stage startups and contributed to open-source projects with 10k+ GitHub stars.",
-    'Outside of work I write about CSS architecture on my blog, occasionally speak at React conferences, and maintain a small open-source animation library.',
+    `I'm a Front End Engineer with 10+ years of experience shipping polished, performant interfaces across e-commerce, SaaS, and agency work. I'm comfortable owning projects end to end from scoping and architecture to production, even some UI/UX. I'm experienced with modern front end tech including React, TypeScript, Next.js, Node.js, and also have experience with API design and development on the backend. Currently exploring AI-assisted development workflows with Claude, Cursor, and other tools.`,
   ],
   stats: [
     { label: 'Location', value: 'Torrance, CA' },
@@ -82,52 +79,45 @@ export const skills = [
 
 export const projects = [
   {
-    title: 'Design System Core',
+    title: 'Next.js Starter Kit',
     description:
-      'A comprehensive React component library with 60+ components, Storybook docs, and automated visual regression testing via Chromatic.',
-    tags: ['React', 'TypeScript', 'Storybook', 'Chromatic'],
-    repo: 'https://github.com',
-    live: 'https://example.com',
+      'My current go-to starter kit for new front end Next.js projects.',
+    tags: [
+      'React',
+      'TypeScript',
+      'Next.js',
+      'Tailwind CSS',
+      'Playwright',
+      'Vitest',
+      'Testing Library',
+      'GitHub Actions',
+      'CI',
+    ],
+    repo: 'https://github.com/ronsj/nextjs-starter-2026',
   },
   {
-    title: 'Realtime Collaboration Board',
+    title: 'Robot Car Simulator',
     description:
-      'Figma-inspired whiteboard with operational transformation for conflict-free concurrent edits. Supports 50+ simultaneous users per session.',
-    tags: ['React', 'WebSockets', 'Canvas API', 'Node.js'],
-    repo: 'https://github.com',
-    live: 'https://example.com',
-  },
-  {
-    title: 'Performance Dashboard',
-    description:
-      'Lighthouse-backed performance monitoring tool with Core Web Vitals tracking, automated reports, and regression alerts via GitHub Actions.',
-    tags: ['Next.js', 'Recharts', 'PostgreSQL', 'GitHub Actions'],
-    repo: 'https://github.com',
-    live: 'https://example.com',
+      'A simple simulator for a robot car that can be controlled with the arrow keys. Uses Three.js for the 3D graphics and WebSockets for the communication between the client and server.',
+    tags: ['Three.js', 'WebSockets', 'Vite', 'TypeScript', 'Node.js'],
+    repo: 'https://github.com/ronsj/robot-car-sim',
   },
 ]
 
 export const experience = [
   {
-    title: 'Senior Frontend Engineer',
-    company: 'Vercel',
-    period: '2022 — Present',
-    description:
-      "Lead the redesign of the dashboard's core navigation and analytics views. Reduced bundle size by 42% through code-splitting and tree-shaking audits.",
-  },
-  {
     title: 'Frontend Engineer',
-    company: 'Linear',
-    period: '2020 — 2022',
+    company: 'SDG',
+    period: '2022 — 2025',
     description:
-      'Built the keyboard shortcut system and command palette from scratch. Shipped the mobile-responsive issue view used by 100k+ daily active users.',
+      "At SDG I built dynamic, responsive storefronts for some of the world's largest e-commerce brands. I worked across the full front end stack, translated design prototypes into code, integrated content management systems, and worked with third-party APIs to deliver polished, production-ready experiences.",
   },
   {
-    title: 'UI Engineer',
-    company: 'Intercom',
-    period: '2018 — 2020',
+    title: 'Frontend Engineer (Supervisor)',
+    company: 'Einstein Industries',
+    period: '2016 — 2022',
     description:
-      'Maintained and extended the Polaris design system. Delivered the Help Center editor rewrite, cutting p95 load time from 4.2s to 0.8s.',
+      'At Einstein Industries I supervised front end development and helped shape the technical direction of a proprietary CMS built in React and Next.js. I developed SEO-focused, content-rich websites, drove performance improvements to meet Core Web Vitals benchmarks, built an internal analytics dashboard to support the sales team, and modernized our build tooling and developer workflows to improve productivity and code quality.',
   },
 ]
 
