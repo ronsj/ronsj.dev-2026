@@ -107,6 +107,7 @@ export const experience = [
   {
     title: 'Frontend Engineer',
     company: 'SDG',
+    companyUrl: 'https://sdg.la',
     period: '2022 — 2025',
     description:
       "At SDG I built dynamic, responsive storefronts for some of the world's largest e-commerce brands. I worked across the full front end stack, translated design prototypes into code, integrated content management systems, and worked with third-party APIs to deliver polished, production-ready experiences.",
@@ -114,6 +115,7 @@ export const experience = [
   {
     title: 'Frontend Engineer (Supervisor)',
     company: 'Einstein Industries',
+    companyUrl: 'https://einsteinindustries.com',
     period: '2016 — 2022',
     description:
       'At Einstein Industries I supervised front end development and helped shape the technical direction of a proprietary CMS built in React and Next.js. I developed SEO-focused, content-rich websites, drove performance improvements to meet Core Web Vitals benchmarks, built an internal analytics dashboard to support the sales team, and modernized our build tooling and developer workflows to improve productivity and code quality.',
