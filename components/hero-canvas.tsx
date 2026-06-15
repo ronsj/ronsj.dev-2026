@@ -3,6 +3,13 @@
 import { useLayoutEffect, useRef } from 'react'
 import gsap from 'gsap'
 import * as THREE from 'three'
+import { LineMaterial } from 'three/addons/lines/LineMaterial.js'
+import { LineSegments2 } from 'three/addons/lines/LineSegments2.js'
+import { LineSegmentsGeometry } from 'three/addons/lines/LineSegmentsGeometry.js'
+
+const WIRE_FRAME_LINE_WIDTH = 1
+const WIRE_FRAME_OPACITY_BASE = 0.18
+const WIRE_FRAME_OPACITY_STEP = 0.06
 
 const SHAPES = [
   () => new THREE.BoxGeometry(1.45, 1.45, 1.45),
@@ -31,20 +38,27 @@ function getAccentColor() {
 function createWireframeMesh(
   geometry: THREE.BufferGeometry,
   accent: string,
-  opacity: number
+  opacity: number,
+  resolution: THREE.Vector2
 ) {
   const edges = new THREE.EdgesGeometry(geometry)
-  const line = new THREE.LineSegments(
-    edges,
-    new THREE.LineBasicMaterial({
+  const lineGeometry = new LineSegmentsGeometry()
+  lineGeometry.setPositions(new Float32Array(edges.attributes.position.array))
+
+  const line = new LineSegments2(
+    lineGeometry,
+    new LineMaterial({
       color: new THREE.Color(accent),
       transparent: true,
       opacity,
+      linewidth: WIRE_FRAME_LINE_WIDTH,
       depthWrite: false,
+      resolution,
     })
   )
 
   geometry.dispose()
+  edges.dispose()
   return line
 }
 
@@ -79,16 +93,18 @@ export function HeroCanvas() {
     const group = new THREE.Group()
     scene.add(group)
 
-    const shapes: THREE.LineSegments[] = []
+    const shapes: LineSegments2[] = []
     const baseX: number[] = []
+    const resolution = new THREE.Vector2()
 
     const buildShapes = () => {
       const accent = getAccentColor()
 
       SHAPES.forEach((createGeometry, index) => {
         const geometry = createGeometry()
-        const opacity = 0.18 + (index % 3) * 0.06
-        const shape = createWireframeMesh(geometry, accent, opacity)
+        const opacity =
+          WIRE_FRAME_OPACITY_BASE + (index % 3) * WIRE_FRAME_OPACITY_STEP
+        const shape = createWireframeMesh(geometry, accent, opacity, resolution)
         const [x, y, z] = POSITIONS[index] ?? [0, 0, 0]
 
         shape.position.set(x, y, z)
@@ -104,8 +120,6 @@ export function HeroCanvas() {
       })
     }
 
-    buildShapes()
-
     const resize = () => {
       const { width, height } = container.getBoundingClientRect()
       if (width === 0 || height === 0) return
@@ -113,8 +127,14 @@ export function HeroCanvas() {
       camera.aspect = width / height
       camera.updateProjectionMatrix()
       renderer.setSize(width, height, false)
+      resolution.set(width, height)
+      shapes.forEach((shape) => {
+        ;(shape.material as LineMaterial).resolution.copy(resolution)
+      })
     }
 
+    resize()
+    buildShapes()
     resize()
     const resizeObserver = new ResizeObserver(resize)
     resizeObserver.observe(container)
@@ -168,7 +188,7 @@ export function HeroCanvas() {
     const themeObserver = new MutationObserver(() => {
       const accent = getAccentColor()
       shapes.forEach((shape) => {
-        ;(shape.material as THREE.LineBasicMaterial).color.set(accent)
+        ;(shape.material as LineMaterial).color.set(accent)
       })
     })
     themeObserver.observe(document.documentElement, {
