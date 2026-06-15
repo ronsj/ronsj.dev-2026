@@ -1,5 +1,5 @@
 import { projects } from '@/lib/portfolio-data'
-import { ExternalLinkIcon, GitHubIcon } from '@/components/icons'
+import { ExternalLinkIcon } from '@/components/icons'
 import { SectionLabel, TagList } from '@/components/ui'
 
 export function ProjectsSection() {
@@ -11,36 +11,25 @@ export function ProjectsSection() {
       <div className="mx-auto max-w-5xl px-6">
         <SectionLabel>Projects</SectionLabel>
 
-        <div className="mt-8 flex flex-col gap-6">
+        <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
           {projects.map((project) => (
             <article
               key={project.title}
               className="border-site-border bg-site-surface rounded-md border p-6"
             >
               <div className="flex items-start justify-between gap-4">
-                <h3 className="font-display text-site-heading text-lg font-medium">
+                <h3 className="text-site-heading font-sans text-base font-medium">
                   {project.title}
                 </h3>
-                <div className="flex shrink-0 items-center gap-3">
-                  <a
-                    href={project.repo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-site-body hover:text-site-accent transition-colors"
-                    aria-label={`View ${project.title} repository`}
-                  >
-                    <GitHubIcon className="size-4" />
-                  </a>
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-site-body hover:text-site-accent transition-colors"
-                    aria-label={`View ${project.title} live project`}
-                  >
-                    <ExternalLinkIcon className="size-4" />
-                  </a>
-                </div>
+                <a
+                  href={project.repo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-site-body hover:text-site-accent inline-flex shrink-0 items-center gap-1 font-mono text-sm transition-colors"
+                >
+                  Repo
+                  <ExternalLinkIcon className="size-3.5" />
+                </a>
               </div>
 
               <p className="text-site-body mt-3 text-sm/relaxed">
