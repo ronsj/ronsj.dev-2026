@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest'
-import { render, screen } from '@testing-library/react'
+import { render, screen, within } from '@testing-library/react'
 import Page from '../app/page'
 
 function renderPage() {
@@ -29,11 +29,21 @@ test('home page renders primary navigation links', () => {
 test('home page renders GitHub link', () => {
   renderPage()
 
-  expect(screen.getByRole('link', { name: 'GitHub' })).toBeDefined()
+  const hero = screen
+    .getByRole('heading', { level: 1, name: 'Ron San Jose' })
+    .closest('section')
+
+  expect(hero).toBeTruthy()
+  expect(within(hero!).getByRole('link', { name: 'GitHub' })).toBeDefined()
 })
 
 test('home page renders LinkedIn link', () => {
   renderPage()
 
-  expect(screen.getByRole('link', { name: 'LinkedIn' })).toBeDefined()
+  const hero = screen
+    .getByRole('heading', { level: 1, name: 'Ron San Jose' })
+    .closest('section')
+
+  expect(hero).toBeTruthy()
+  expect(within(hero!).getByRole('link', { name: 'LinkedIn' })).toBeDefined()
 })
