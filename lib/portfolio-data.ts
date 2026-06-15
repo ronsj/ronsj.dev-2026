@@ -79,6 +79,16 @@ export const skills = [
 
 export const projects = [
   {
+    title: "Peet's Coffee",
+    description:
+      "Shopify storefront for Peet's Coffee. Built dynamic product pages. Connected content management systems, retail systems, and vendor APIs.",
+    tags: ['Shopify', 'E-Commerce', 'Liquid', 'JavaScript', 'APIs'],
+    link: {
+      type: 'website',
+      url: 'https://peets.com',
+    },
+  },
+  {
     title: 'Next.js Starter Kit',
     description:
       'My current go-to starter kit for new front end Next.js projects. Includes my preferred tech stack and development workflows.',
@@ -92,14 +102,37 @@ export const projects = [
       'GitHub Actions',
       'CI',
     ],
-    repo: 'https://github.com/ronsj/nextjs-starter-2026',
+    link: {
+      type: 'repo',
+      url: 'https://github.com/ronsj/nextjs-starter-2026',
+    },
   },
   {
     title: 'Robot Car Simulator',
     description:
       'A simple simulator for a robot car that can be controlled with the arrow keys. Uses Three.js for the 3D graphics and WebSockets for the communication between the client and server.',
     tags: ['Three.js', 'WebSockets', 'Vite', 'TypeScript', 'Node.js'],
-    repo: 'https://github.com/ronsj/robot-car-sim',
+    link: {
+      type: 'repo',
+      url: 'https://github.com/ronsj/robot-car-sim',
+    },
+  },
+  {
+    title: 'SYRN',
+    description:
+      "Scaffolded project from scratch for SYRN's new Shopify store. Improved build tooling and developer workflows. Laid foundational groundwork for future development.",
+    tags: [
+      'Shopify',
+      'E-Commerce',
+      'Liquid',
+      'JavaScript',
+      'TypeScript',
+      'Vite',
+    ],
+    link: {
+      type: 'website',
+      url: 'https://syrn.com',
+    },
   },
 ]
 

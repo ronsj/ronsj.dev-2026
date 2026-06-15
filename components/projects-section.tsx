@@ -22,12 +22,12 @@ export function ProjectsSection() {
                   {project.title}
                 </h3>
                 <a
-                  href={project.repo}
+                  href={project.link.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-site-body hover:text-site-accent inline-flex shrink-0 items-center gap-1 font-mono text-sm transition-colors"
                 >
-                  Repo
+                  {project.link.type === 'repo' ? 'Repo' : 'Site'}
                   <ExternalLinkIcon className="size-3.5" />
                 </a>
               </div>
