@@ -28,10 +28,10 @@ export function AboutSection() {
                 key={stat.label}
                 className="border-site-border flex items-center justify-between border-b py-3 first:pt-0"
               >
-                <dt className="text-site-body text-label font-mono">
+                <dt className="text-site-body shrink-0 pr-4 font-mono text-xs">
                   {stat.label}
                 </dt>
-                <dd className="text-site-heading text-right text-sm">
+                <dd className="text-site-heading text-right text-xs">
                   {stat.value}
                 </dd>
               </div>

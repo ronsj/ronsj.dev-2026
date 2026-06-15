@@ -17,14 +17,14 @@ export function ExperienceSection() {
               className="py-8 first:pt-0"
             >
               <div className="flex flex-col gap-1 lg:flex-row lg:items-start lg:justify-between">
-                <h3 className="font-display text-site-heading text-base">
+                <h3 className="text-site-heading font-sans text-base font-semibold">
                   {role.title}
-                  <span className="text-site-accent"> · </span>
-                  <span className="text-site-body font-sans text-sm">
+                  <span className="text-site-accent font-extrabold"> · </span>
+                  <span className="text-site-body font-sans text-base font-normal">
                     {role.company}
                   </span>
                 </h3>
-                <p className="text-site-body font-mono text-xs lg:text-right">
+                <p className="text-site-body font-mono text-sm lg:text-right">
                   {role.period}
                 </p>
               </div>

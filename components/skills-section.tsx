@@ -16,7 +16,8 @@ export function SkillsSection() {
               key={group.category}
               className="flex flex-col gap-3 sm:flex-row sm:items-start sm:gap-3"
             >
-              <h3 className="text-site-accent text-label w-24 shrink-0 font-mono tracking-widest uppercase">
+              {/* give this a line height near 28px */}
+              <h3 className="text-site-body text-label w-24 shrink-0 font-mono leading-7 tracking-widest uppercase">
                 {group.category}
               </h3>
               <ul className="flex flex-wrap gap-2">

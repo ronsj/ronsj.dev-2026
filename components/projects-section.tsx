@@ -11,7 +11,7 @@ export function ProjectsSection() {
       <div className="mx-auto max-w-5xl px-6">
         <SectionLabel>Projects</SectionLabel>
 
-        <div className="mt-8 space-y-4">
+        <div className="mt-8 flex flex-col gap-6">
           {projects.map((project) => (
             <article
               key={project.title}

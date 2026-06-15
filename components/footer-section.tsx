@@ -6,7 +6,7 @@ export function FooterSection() {
     <footer className="border-site-border border-t py-16">
       <div className="mx-auto flex max-w-5xl flex-col gap-6 px-6 lg:flex-row lg:items-end lg:justify-between">
         <div>
-          <p className="font-display text-site-heading text-base">
+          <p className="text-site-heading font-sans text-base">
             {footer.tagline}
           </p>
           <a

@@ -1,6 +1,6 @@
 export function SectionLabel({ children }: { children: string }) {
   return (
-    <p className="text-site-accent text-label font-mono tracking-widest uppercase">
+    <p className="text-box-trim-both text-box-edge-cap-alpha text-site-accent text-md font-mono tracking-widest uppercase">
       {children}
     </p>
   )

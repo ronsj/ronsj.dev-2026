@@ -6,7 +6,7 @@ export const navItems = [
 ] as const
 
 export const hero = {
-  label: 'Frontend Engineer | UX Enthusiast',
+  label: 'Frontend Engineer',
   name: 'Ron San Jose',
   summary:
     'I build fast, accessible, and beautifully crafted interfaces. Six years of shipping production React at companies where UI quality is a first-class concern.',
@@ -25,7 +25,10 @@ export const about = {
     { label: 'Location', value: 'Torrance, CA' },
     { label: 'Experience', value: '10+ years' },
     { label: 'Focus', value: 'React, TypeScript, UX, Performance' },
-    { label: 'Open to', value: 'Mid-Senior roles, Full-Time,Remote/On-site' },
+    {
+      label: 'Open to',
+      value: 'Mid-Senior roles. Remote or on-site.',
+    },
   ],
 }
 
@@ -44,14 +47,16 @@ export const skills = [
     ],
   },
   {
-    category: 'Technologies',
+    category: 'Tech/Tools',
     items: [
+      'AI-Assisted Development',
       'React',
       'Next.js',
       'Node.js',
       'Express.js',
-      'Vue',
-      'Vite/Vitest',
+      'Vue.js',
+      'Vite',
+      'Vitest',
       'Testing Library',
       'Playwright',
       'Tailwind CSS',
@@ -61,22 +66,13 @@ export const skills = [
       'GraphQL',
       'Docker',
       'Git',
-      'AI-Assisted Development',
-    ],
-  },
-  {
-    category: 'Applications',
-    items: [
       'VS Code',
       'Cursor',
       'Claude',
+      'GitHub',
       'Figma',
       'Photoshop',
       'Illustrator',
-      'Jira',
-      'GitHub',
-      'Google Workspace',
-      'Slack',
     ],
   },
 ]
@@ -133,7 +129,7 @@ export const experience = [
 ]
 
 export const footer = {
-  tagline: "Let's build something together.",
+  tagline: "Let's mosey.",
   email: hero.email,
   github: hero.github,
   linkedin: hero.linkedin,

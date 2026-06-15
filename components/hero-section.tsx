@@ -8,15 +8,15 @@ export function HeroSection() {
       <HeroCanvas />
 
       <div className="relative mx-auto max-w-5xl px-6">
-        <p className="text-site-accent font-mono text-xs tracking-widest uppercase">
+        <p className="text-site-accent font-mono text-sm tracking-widest uppercase">
           {hero.label}
         </p>
 
-        <h1 className="font-display text-site-heading mt-4 text-5xl/none font-bold tracking-tight lg:text-8xl/tight lg:tracking-tight">
+        <h1 className="font-display text-site-heading text-box-trim-both text-box-edge-cap-alpha mt-8 text-5xl/none font-bold tracking-tight lg:text-8xl/tight lg:tracking-tight">
           {hero.name}
         </h1>
 
-        <p className="text-site-body mt-6 max-w-xl text-lg/relaxed">
+        <p className="text-site-body mt-8 max-w-xl text-lg/relaxed">
           {hero.summary}
         </p>
 
