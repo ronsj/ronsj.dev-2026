@@ -20,9 +20,20 @@ export function ExperienceSection() {
                 <h3 className="text-site-heading font-sans text-base font-medium">
                   {role.title}
                   <span className="text-site-accent font-extrabold"> · </span>
-                  <span className="text-site-body text-base font-light">
-                    {role.company}
-                  </span>
+                  {role.companyUrl ? (
+                    <a
+                      href={role.companyUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-site-body hover:text-site-accent text-base font-light transition-colors"
+                    >
+                      {role.company}
+                    </a>
+                  ) : (
+                    <span className="text-site-body text-base font-light">
+                      {role.company}
+                    </span>
+                  )}
                 </h3>
                 <p className="text-site-body font-mono text-sm lg:text-right">
                   {role.period}
