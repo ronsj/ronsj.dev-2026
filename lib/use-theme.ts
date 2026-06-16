@@ -9,7 +9,7 @@ import {
 } from '@/lib/theme'
 
 function getServerSnapshot(): Theme {
-  return 'light'
+  return 'dark'
 }
 
 export function useTheme() {

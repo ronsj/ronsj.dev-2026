@@ -32,7 +32,7 @@ export function readStoredTheme(): Theme {
   } catch {
     // Ignore storage failures in restricted environments.
   }
-  return 'light'
+  return 'dark'
 }
 
 export function applyTheme(theme: Theme) {
