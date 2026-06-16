@@ -17,15 +17,17 @@ export function ExperienceSection() {
               className="py-8 first:pt-0"
             >
               <div className="flex flex-col gap-1 lg:flex-row lg:items-start lg:justify-between">
-                <h3 className="text-site-heading font-sans text-base font-medium">
-                  {role.title}
-                  <span className="text-site-accent font-extrabold"> · </span>
+                <h3 className="text-site-heading flex flex-col font-sans text-base font-medium lg:flex-row lg:items-baseline">
+                  <span>{role.title}</span>
+                  <span className="text-site-accent px-2 font-extrabold sm:hidden lg:inline">
+                    &bull;
+                  </span>
                   {role.companyUrl ? (
                     <a
                       href={role.companyUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-site-body hover:text-site-accent text-base font-light transition-colors"
+                      className="text-site-body hover:text-site-accent text-xs font-light transition-colors lg:text-base"
                     >
                       {role.company}
                     </a>
