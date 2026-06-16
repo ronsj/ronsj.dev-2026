@@ -81,7 +81,7 @@ export const projects = [
   {
     title: "Peet's Coffee",
     description:
-      "Shopify storefront for Peet's Coffee. Built dynamic product pages. Connected content management systems, retail systems, and vendor APIs.",
+      "Shopify storefront for Peet's Coffee. Helped build dynamic product pages and landing pages to increase retail and subscription conversions.",
     tags: ['Shopify', 'E-Commerce', 'Liquid', 'JavaScript', 'APIs'],
     link: {
       type: 'website',
