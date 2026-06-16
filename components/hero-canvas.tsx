@@ -10,6 +10,9 @@ import { LineSegmentsGeometry } from 'three/addons/lines/LineSegmentsGeometry.js
 const WIRE_FRAME_LINE_WIDTH = 1
 const WIRE_FRAME_OPACITY_BASE = 0.18
 const WIRE_FRAME_OPACITY_STEP = 0.06
+const MOBILE_MAX_WIDTH = 1023
+const MOBILE_GROUP_SCALE = 1.5
+const MOBILE_WIRE_FRAME_OPACITY_BASE = 0.12
 
 const SHAPES = [
   () => new THREE.BoxGeometry(1.45, 1.45, 1.45),
@@ -128,8 +131,15 @@ export function HeroCanvas() {
       camera.updateProjectionMatrix()
       renderer.setSize(width, height, false)
       resolution.set(width, height)
-      shapes.forEach((shape) => {
-        ;(shape.material as LineMaterial).resolution.copy(resolution)
+      group.scale.setScalar(width <= MOBILE_MAX_WIDTH ? MOBILE_GROUP_SCALE : 1)
+      const opacityBase =
+        width <= MOBILE_MAX_WIDTH
+          ? MOBILE_WIRE_FRAME_OPACITY_BASE
+          : WIRE_FRAME_OPACITY_BASE
+      shapes.forEach((shape, index) => {
+        const material = shape.material as LineMaterial
+        material.resolution.copy(resolution)
+        material.opacity = opacityBase + (index % 3) * WIRE_FRAME_OPACITY_STEP
       })
     }
 
