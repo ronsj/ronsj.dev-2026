@@ -19,7 +19,7 @@ export const hero = {
 
 export const about = {
   paragraphs: [
-    `I'm a Front End Engineer with 10+ years of experience shipping polished, performant interfaces across e-commerce, SaaS, and agency work. I'm comfortable owning projects end to end from scoping and architecture to production, even some UI/UX. I'm experienced with modern front end tech including React, TypeScript, Next.js, Node.js, and also have experience with API design and development on the backend. Currently exploring AI-assisted development workflows with Claude, Cursor, and other tools.`,
+    `I'm a Frontend Engineer with 10+ years of experience shipping polished, performant interfaces across e-commerce, SaaS, and agency work. I'm comfortable owning projects end to end from scoping and architecture to production, even some UI/UX. I'm experienced with modern frontend tech including React, TypeScript, Next.js, Node.js, and also have experience with API design and development on the backend. Currently exploring AI-assisted development workflows with Claude, Cursor, and other tools.`,
   ],
   stats: [
     { label: 'Location', value: 'Torrance, CA' },
@@ -91,7 +91,7 @@ export const projects = [
   {
     title: 'Next.js Starter Kit',
     description:
-      'My current go-to starter kit for new front end Next.js projects. Includes my preferred tech stack and development workflows.',
+      'My current go-to starter kit for new frontend Next.js projects. Includes my preferred tech stack and development workflows.',
     tags: [
       'React',
       'TypeScript',
@@ -143,7 +143,7 @@ export const experience = [
     companyUrl: 'https://sdg.la',
     period: '2022 — 2025',
     description:
-      "At SDG I built dynamic, responsive storefronts for some of the world's largest e-commerce brands. I worked across the full front end stack, translated design prototypes into code, integrated content management systems, and worked with third-party APIs to deliver polished, production-ready experiences.",
+      "At SDG I built dynamic, responsive storefronts for some of the world's largest e-commerce brands. I worked across the full frontend stack, translated design prototypes into code, integrated content management systems, and worked with third-party APIs to deliver polished, production-ready experiences.",
   },
   {
     title: 'Frontend Engineer (Supervisor)',
@@ -151,7 +151,7 @@ export const experience = [
     companyUrl: 'https://einsteinindustries.com',
     period: '2016 — 2022',
     description:
-      'At Einstein Industries I supervised front end development and helped shape the technical direction of a proprietary CMS built in React and Next.js. I developed SEO-focused, content-rich websites, drove performance improvements to meet Core Web Vitals benchmarks, built an internal analytics dashboard to support the sales team, and modernized our build tooling and developer workflows to improve productivity and code quality.',
+      'At Einstein Industries I supervised frontend development and helped shape the technical direction of a proprietary CMS built in React and Next.js. I developed SEO-focused, content-rich websites, drove performance improvements to meet Core Web Vitals benchmarks, built an internal analytics dashboard to support the sales team, and modernized our build tooling and developer workflows to improve productivity and code quality.',
   },
 ]
 
