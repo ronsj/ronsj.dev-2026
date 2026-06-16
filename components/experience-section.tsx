@@ -19,7 +19,7 @@ export function ExperienceSection() {
               <div className="flex flex-col gap-1 lg:flex-row lg:items-start lg:justify-between">
                 <h3 className="text-site-heading flex flex-col font-sans text-base font-medium lg:flex-row lg:items-baseline">
                   <span>{role.title}</span>
-                  <span className="text-site-accent px-2 font-extrabold sm:hidden lg:inline">
+                  <span className="text-site-accent hidden px-2 font-extrabold lg:inline">
                     &bull;
                   </span>
                   {role.companyUrl ? (
