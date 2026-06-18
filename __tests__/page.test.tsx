@@ -47,3 +47,14 @@ test('home page renders LinkedIn link', () => {
   expect(hero).toBeTruthy()
   expect(within(hero!).getByRole('link', { name: 'LinkedIn' })).toBeDefined()
 })
+
+test('home page renders Figma link', () => {
+  renderPage()
+
+  const hero = screen
+    .getByRole('heading', { level: 1, name: 'Ron San Jose' })
+    .closest('section')
+
+  expect(hero).toBeTruthy()
+  expect(within(hero!).getByRole('link', { name: 'Figma' })).toBeDefined()
+})

@@ -8,6 +8,7 @@ export const navItems = [
 const myName = 'Ron San Jose'
 const githubUrl = 'https://github.com/ronsj'
 const linkedinUrl = 'https://linkedin.com/in/ronsanjose'
+const figmaUrl = 'https://www.figma.com/@ronsj'
 
 export const hero = {
   label: 'Frontend Engineer',
@@ -15,6 +16,7 @@ export const hero = {
   summary: '',
   github: githubUrl,
   linkedin: linkedinUrl,
+  figma: figmaUrl,
 }
 
 export const about = {
@@ -158,5 +160,6 @@ export const experience = [
 export const footer = {
   github: githubUrl,
   linkedin: linkedinUrl,
+  figma: figmaUrl,
   copyright: `${myName}`,
 }

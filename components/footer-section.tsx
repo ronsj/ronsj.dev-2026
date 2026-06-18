@@ -1,5 +1,5 @@
 import { footer } from '@/lib/portfolio-data'
-import { GitHubIcon, LinkedInIcon } from '@/components/icons'
+import { FigmaIcon, GitHubIcon, LinkedInIcon } from '@/components/icons'
 
 export function FooterSection() {
   return (
@@ -23,6 +23,15 @@ export function FooterSection() {
             aria-label="LinkedIn"
           >
             <LinkedInIcon className="size-4.5" />
+          </a>
+          <a
+            href={footer.figma}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-site-body hover:text-site-accent transition-colors"
+            aria-label="Figma"
+          >
+            <FigmaIcon className="size-4.5" />
           </a>
         </div>
         <p className="text-site-body text-right font-sans text-sm capitalize">

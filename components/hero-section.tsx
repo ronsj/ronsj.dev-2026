@@ -1,5 +1,5 @@
 import { hero } from '@/lib/portfolio-data'
-import { GitHubIcon, LinkedInIcon } from '@/components/icons'
+import { FigmaIcon, GitHubIcon, LinkedInIcon } from '@/components/icons'
 import { HeroCanvas } from '@/components/hero-canvas-dynamic'
 
 export function HeroSection() {
@@ -41,6 +41,15 @@ export function HeroSection() {
           >
             <LinkedInIcon className="size-3.5" />
             LinkedIn
+          </a>
+          <a
+            href={hero.figma}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border-site-border text-site-accent hover:text-site-heading inline-flex items-center justify-center gap-2 rounded-md border px-5 py-2.5 font-mono text-lg transition-colors"
+          >
+            <FigmaIcon className="size-3.5" />
+            Figma
           </a>
         </div>
       </div>
