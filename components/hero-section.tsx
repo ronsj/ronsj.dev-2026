@@ -1,5 +1,10 @@
 import { hero } from '@/lib/portfolio-data'
-import { FigmaIcon, GitHubIcon, LinkedInIcon } from '@/components/icons'
+import {
+  FigmaIcon,
+  GitHubIcon,
+  LinkedInIcon,
+  MailIcon,
+} from '@/components/icons'
 import { HeroCanvas } from '@/components/hero-canvas-dynamic'
 
 export function HeroSection() {
@@ -24,6 +29,12 @@ export function HeroSection() {
         </p>
 
         <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center lg:gap-5">
+          <a
+            href="#projects"
+            className="bg-site-accent text-site-bg hover:bg-site-heading inline-flex items-center justify-center rounded-md px-5 py-2.5 font-mono text-lg transition-colors"
+          >
+            View Projects
+          </a>
           <a
             href={hero.github}
             target="_blank"

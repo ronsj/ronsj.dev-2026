@@ -9,11 +9,13 @@ const myName = 'Ron San Jose'
 const githubUrl = 'https://github.com/ronsj'
 const linkedinUrl = 'https://linkedin.com/in/ronsanjose'
 const figmaUrl = 'https://www.figma.com/@ronsj'
+const email = 'ronsj1@gmail.com'
 
 export const hero = {
   label: 'Frontend Engineer',
   name: myName,
-  summary: '',
+  summary:
+    'Frontend engineer specializing in polished, production-grade interfaces for e-commerce, CMS platforms, and AI-enabled products.',
   github: githubUrl,
   linkedin: linkedinUrl,
   figma: figmaUrl,
@@ -21,61 +23,60 @@ export const hero = {
 
 export const about = {
   paragraphs: [
-    `I'm a Frontend Engineer with 10+ years of experience shipping polished, performant interfaces across e-commerce, SaaS, and agency work. I'm comfortable owning projects end to end from scoping and architecture to production, even some UI/UX. I'm experienced with modern frontend tech including React, TypeScript, Next.js, Node.js, and also have experience with API design and development on the backend. Currently exploring AI-assisted development workflows with Claude, Cursor, and other tools.`,
+    `I'm a frontend engineer who likes the full lifecycle of a project: understanding the problem, making technical calls, and getting something live that people actually use. I've spent most of my career on e-commerce and content-rich products, making UI decisions and performance improvements that have a real impact.`,
+    `My personal stack centers on React, TypeScript, and Next.js, with solid Node.js experience when the work calls for it. I care about usability, accessibility, developer experience, and shipping tested code that holds up long-term.`,
   ],
   stats: [
     { label: 'Location', value: 'Torrance, CA' },
     { label: 'Experience', value: '10+ years' },
-    { label: 'Focus', value: 'Frontend, APIs, Performance, a11y, UX' },
+    { label: 'Focus', value: 'Frontend, performance, accessibility, UX' },
     {
       label: 'Open to',
-      value: 'Mid-senior roles, remote or on-site',
+      value: 'Frontend or fullstack · Remote or hybrid',
     },
   ],
 }
 
 export const skills = [
   {
-    category: 'Languages',
+    category: 'Core',
     items: [
       'TypeScript',
       'JavaScript',
-      'PHP',
-      'Liquid',
-      'Sass',
-      'CSS',
-      'HTML',
-      'Markdown',
-    ],
-  },
-  {
-    category: 'Tech/Tools',
-    items: [
-      'AI-Assisted Development',
       'React',
       'Next.js',
       'Node.js',
-      'Express.js',
       'Vue.js',
+      'Shopify/Liquid',
+      'Tailwind CSS',
+      'HTML',
+      'Sass',
+      'CSS',
+      'PHP',
+    ],
+  },
+  {
+    category: 'Exerpienced',
+    items: [
+      'AI-assisted workflows',
+      'Git',
+      'Express.js',
+      'RESTful APIs',
+      'GraphQL',
       'Vite',
+      'Docker',
       'Vitest',
       'Testing Library',
       'Playwright',
-      'Tailwind CSS',
-      'Sass',
       'CI/CD',
-      'RESTful APIs',
-      'GraphQL',
-      'Docker',
-      'Git',
-      'VS Code',
-      'Cursor',
-      'Claude',
-      'GitHub',
-      'Figma',
-      'Photoshop',
-      'Illustrator',
+      'Prisma',
+      'Drizzle',
+      'PostgreSQL',
     ],
+  },
+  {
+    category: 'Design Tools',
+    items: ['Figma', 'Photoshop', 'Illustrator'],
   },
 ]
 
@@ -83,7 +84,7 @@ export const projects = [
   {
     title: "Peet's Coffee",
     description:
-      "Shopify storefront for Peet's Coffee. Helped build dynamic product pages and landing pages to increase retail and subscription conversions.",
+      'Built dynamic product and landing page templates on Shopify/Liquid, focused on retail and subscription conversion flows.',
     tags: ['Shopify', 'E-Commerce', 'Liquid', 'JavaScript', 'APIs'],
     link: {
       type: 'website',
@@ -91,9 +92,26 @@ export const projects = [
     },
   },
   {
+    title: 'SYRN',
+    description:
+      'Greenfield Shopify build. Established repo structure and build pipeline. Built out initial sections, product pages, and global patterns for the team that followed.',
+    tags: [
+      'Shopify',
+      'E-Commerce',
+      'Liquid',
+      'JavaScript',
+      'TypeScript',
+      'Vite',
+    ],
+    link: {
+      type: 'website',
+      url: 'https://syrn.com',
+    },
+  },
+  {
     title: 'Next.js Starter Kit',
     description:
-      'My current go-to starter kit for new frontend Next.js projects. Includes my preferred tech stack and development workflows.',
+      'Opinionated Next.js starter kit. The baseline I use to ship new projects quickly.',
     tags: [
       'React',
       'TypeScript',
@@ -112,28 +130,11 @@ export const projects = [
   {
     title: 'Robot Car Simulator',
     description:
-      'A simple simulator for a robot car that can be controlled with the arrow keys. Uses Three.js for the 3D graphics and WebSockets for the communication between the client and server.',
+      'Browser-based 3D sim with Three.js and a WebSocket-controlled server. A playground for real-time client/server interaction.',
     tags: ['Three.js', 'WebSockets', 'Vite', 'TypeScript', 'Node.js'],
     link: {
       type: 'repo',
       url: 'https://github.com/ronsj/robot-car-sim',
-    },
-  },
-  {
-    title: 'SYRN',
-    description:
-      "Scaffolded project from scratch for SYRN's new Shopify store. Improved build tooling and developer workflows. Laid foundational groundwork for future development.",
-    tags: [
-      'Shopify',
-      'E-Commerce',
-      'Liquid',
-      'JavaScript',
-      'TypeScript',
-      'Vite',
-    ],
-    link: {
-      type: 'website',
-      url: 'https://syrn.com',
     },
   },
 ]
@@ -145,15 +146,15 @@ export const experience = [
     companyUrl: 'https://sdg.la',
     period: '2022 — 2025',
     description:
-      "At SDG I built dynamic, responsive storefronts for some of the world's largest e-commerce brands. I worked across the full frontend stack, translated design prototypes into code, integrated content management systems, and worked with third-party APIs to deliver polished, production-ready experiences.",
+      'Built responsive Shopify and custom storefronts for major e-commerce brands at agency pace. Translated design prototypes into production UI, integrated CMS and third-party APIs, and shipped experiences ready for high-traffic retail.',
   },
   {
-    title: 'Frontend Engineer (Supervisor)',
+    title: 'Frontend Engineer · Team Lead',
     company: 'Einstein Industries',
     companyUrl: 'https://einsteinindustries.com',
     period: '2016 — 2022',
     description:
-      'At Einstein Industries I supervised frontend development and helped shape the technical direction of a proprietary CMS built in React and Next.js. I developed SEO-focused, content-rich websites, drove performance improvements to meet Core Web Vitals benchmarks, built an internal analytics dashboard to support the sales team, and modernized our build tooling and developer workflows to improve productivity and code quality.',
+      'Supervised frontend development and helped steer a proprietary React/Next.js CMS. Shipped SEO-focused, content-rich sites and drove Core Web Vitals improvements across the portfolio. Built an internal analytics dashboard for sales and modernized build tooling to improve team velocity and code quality.',
   },
 ]
 
@@ -161,5 +162,7 @@ export const footer = {
   github: githubUrl,
   linkedin: linkedinUrl,
   figma: figmaUrl,
+  email,
+  tagline: '#opentowork',
   copyright: `${myName}`,
 }
