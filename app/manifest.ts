@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Ron San Jose — Frontend Engineer',
+    name: 'Ron San Jose | Frontend Engineer',
     short_name: 'Ron San Jose',
     icons: [
       { src: '/icon-192.png', sizes: '192x192', type: 'image/png' },

@@ -20,7 +20,7 @@ const jetBrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Ron San Jose — Frontend Engineer',
+  title: 'Ron San Jose | Frontend Engineer',
   description:
     'Portfolio of Ron San Jose, a Frontend Engineer focused on fast, accessible React interfaces.',
 }
