@@ -1,10 +1,5 @@
 import { hero } from '@/lib/portfolio-data'
-import {
-  FigmaIcon,
-  GitHubIcon,
-  LinkedInIcon,
-  MailIcon,
-} from '@/components/icons'
+import { FigmaIcon, GitHubIcon, LinkedInIcon } from '@/components/icons'
 import { HeroCanvas } from '@/components/hero-canvas-dynamic'
 
 export function HeroSection() {
