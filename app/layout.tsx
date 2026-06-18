@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter, JetBrains_Mono, Playfair_Display } from 'next/font/google'
+import { siteDescription, siteName, siteTitle, siteUrl } from '@/lib/site'
 import { THEME_STORAGE_KEY } from '@/lib/theme'
 import './globals.css'
 
@@ -20,9 +21,22 @@ const jetBrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Ron San Jose | Frontend Engineer',
-  description:
-    'Portfolio of Ron San Jose, a Frontend Engineer focused on fast, accessible React interfaces.',
+  metadataBase: new URL(siteUrl),
+  title: siteTitle,
+  description: siteDescription,
+  openGraph: {
+    title: siteTitle,
+    description: siteDescription,
+    url: siteUrl,
+    siteName,
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteTitle,
+    description: siteDescription,
+  },
 }
 
 export default function RootLayout({
