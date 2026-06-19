@@ -149,7 +149,7 @@ export const experience = [
       'Built responsive Shopify and custom storefronts for major e-commerce brands at agency pace. Translated design prototypes into production UI, integrated CMS and third-party APIs, and shipped experiences ready for high-traffic retail.',
   },
   {
-    title: 'Frontend Engineer · Team Lead',
+    title: 'Frontend Engineer (Supervisor)',
     company: 'Einstein Industries',
     companyUrl: 'https://einsteinindustries.com',
     period: '2016 — 2022',
