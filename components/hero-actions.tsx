@@ -15,6 +15,7 @@ type HeroActionsProps = {
 
 export function HeroActions({ github, linkedin, figma }: HeroActionsProps) {
   const containerRef = useRef<HTMLDivElement>(null)
+  const { contextSafe } = useGSAP({ scope: containerRef })
 
   useGSAP(
     () => {
@@ -37,6 +38,37 @@ export function HeroActions({ github, linkedin, figma }: HeroActionsProps) {
       mm.add('(prefers-reduced-motion: reduce)', () => {
         gsap.set(buttons, { opacity: 1, y: 0 })
       })
+
+      mm.add(
+        '(hover: hover) and (prefers-reduced-motion: no-preference)',
+        () => {
+          const handlers: Array<{
+            el: Element
+            onEnter: () => void
+            onLeave: () => void
+          }> = []
+
+          buttons.forEach((button) => {
+            const onEnter = contextSafe(() => {
+              gsap.to(button, { y: -4, duration: 0.25, ease: 'power2.out' })
+            })
+            const onLeave = contextSafe(() => {
+              gsap.to(button, { y: 0, duration: 0.25, ease: 'power2.out' })
+            })
+
+            button.addEventListener('mouseenter', onEnter)
+            button.addEventListener('mouseleave', onLeave)
+            handlers.push({ el: button, onEnter, onLeave })
+          })
+
+          return () => {
+            handlers.forEach(({ el, onEnter, onLeave }) => {
+              el.removeEventListener('mouseenter', onEnter)
+              el.removeEventListener('mouseleave', onLeave)
+            })
+          }
+        }
+      )
 
       return () => mm.revert()
     },
