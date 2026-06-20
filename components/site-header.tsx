@@ -87,15 +87,17 @@ export function SiteHeader() {
 
           <nav
             aria-label="Primary"
-            className="hidden items-center gap-8 lg:flex"
+            className="hidden gap-8 self-stretch lg:flex"
           >
             {navItems.map((item) => (
               <a
                 key={item.id}
                 href={`#${item.id}`}
-                className="text-site-body hover:text-site-heading font-mono text-sm transition-colors"
+                className="group text-site-body hover:text-site-heading inline-flex h-full items-center font-mono text-sm transition-colors"
               >
-                {item.label}
+                <span className="after:bg-site-accent relative after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-out group-hover:after:scale-x-100 motion-reduce:after:transition-none">
+                  {item.label}
+                </span>
               </a>
             ))}
           </nav>
