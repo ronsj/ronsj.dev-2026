@@ -3,6 +3,8 @@ import AxeBuilder from '@axe-core/playwright'
 import { test, expect } from './fixtures/axe-test'
 
 async function gotoWithTheme(page: Page, theme: 'light' | 'dark') {
+  // Skip GSAP intro animations so axe scans stable, fully-opaque content.
+  await page.emulateMedia({ reducedMotion: 'reduce' })
   await page.addInitScript((t) => {
     localStorage.setItem('theme', t)
     document.documentElement.classList.toggle('dark', t === 'dark')
