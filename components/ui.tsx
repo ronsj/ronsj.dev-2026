@@ -1,6 +1,15 @@
-export function SectionLabel({ children }: { children: string }) {
+export function SectionLabel({
+  children,
+  sectionId,
+}: {
+  children: string
+  sectionId: string
+}) {
   return (
-    <p className="text-box-trim-both text-box-edge-cap-alpha text-site-accent font-mono text-base tracking-widest uppercase">
+    <p
+      data-section-id={sectionId}
+      className="text-box-trim-both text-box-edge-cap-alpha text-site-accent font-mono text-base tracking-widest uppercase"
+    >
       {children}
     </p>
   )

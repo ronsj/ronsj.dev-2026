@@ -9,7 +9,7 @@ export function ProjectsSection() {
       className="border-site-border scroll-mt-24 border-t py-16"
     >
       <div className="mx-auto max-w-5xl px-6">
-        <SectionLabel>Projects</SectionLabel>
+        <SectionLabel sectionId="projects">Projects</SectionLabel>
 
         <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
           {projects.map((project) => (

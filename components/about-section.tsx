@@ -8,7 +8,7 @@ export function AboutSection() {
       className="border-site-border scroll-mt-24 border-t py-16"
     >
       <div className="mx-auto max-w-5xl px-6">
-        <SectionLabel>About</SectionLabel>
+        <SectionLabel sectionId="about">About</SectionLabel>
 
         <div className="mt-8 flex flex-col gap-12 lg:mt-8 lg:flex-row lg:gap-12">
           <div className="lg:max-w-about-copy flex-1 space-y-4">

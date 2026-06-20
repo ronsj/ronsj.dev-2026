@@ -8,7 +8,7 @@ export function SkillsSection() {
       className="border-site-border scroll-mt-24 border-t py-16"
     >
       <div className="mx-auto max-w-5xl px-6">
-        <SectionLabel>Skills</SectionLabel>
+        <SectionLabel sectionId="skills">Skills</SectionLabel>
 
         <div className="mt-8 flex flex-col gap-5">
           {skills.map((group) => (

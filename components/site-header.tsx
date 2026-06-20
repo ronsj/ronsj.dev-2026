@@ -10,8 +10,11 @@ import {
   SunIcon,
 } from '@/components/icons'
 import { useTheme } from '@/lib/use-theme'
+import { useActiveSection } from '@/lib/use-active-section'
+import { HEADER_HEIGHT_PX } from '@/lib/site-layout'
 
-const HEADER_HEIGHT_PX = 56
+const underlineBase =
+  'after:bg-site-accent relative after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-full after:origin-left after:transition-transform after:duration-300 after:ease-out motion-reduce:after:transition-none'
 
 function ThemeToggle() {
   const { theme, toggleTheme } = useTheme()
@@ -37,6 +40,7 @@ function ThemeToggle() {
 export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [showCompactTitle, setShowCompactTitle] = useState(false)
+  const activeId = useActiveSection()
 
   useEffect(() => {
     const heroTitle = document.getElementById('hero-title')
@@ -89,17 +93,32 @@ export function SiteHeader() {
             aria-label="Primary"
             className="hidden gap-8 self-stretch lg:flex"
           >
-            {navItems.map((item) => (
-              <a
-                key={item.id}
-                href={`#${item.id}`}
-                className="group text-site-body hover:text-site-heading inline-flex h-full items-center font-mono text-sm transition-colors"
-              >
-                <span className="after:bg-site-accent relative after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-out group-hover:after:scale-x-100 motion-reduce:after:transition-none">
-                  {item.label}
-                </span>
-              </a>
-            ))}
+            {navItems.map((item) => {
+              const isActive = activeId === item.id
+
+              return (
+                <a
+                  key={item.id}
+                  href={`#${item.id}`}
+                  aria-current={isActive ? 'location' : undefined}
+                  className={`group inline-flex h-full items-center font-mono text-sm transition-colors ${
+                    isActive
+                      ? 'text-site-heading'
+                      : 'text-site-body hover:text-site-heading'
+                  }`}
+                >
+                  <span
+                    className={`${underlineBase} ${
+                      isActive
+                        ? 'after:scale-x-100'
+                        : 'after:scale-x-0 group-hover:after:scale-x-100'
+                    }`}
+                  >
+                    {item.label}
+                  </span>
+                </a>
+              )
+            })}
           </nav>
 
           <div className="absolute right-6 flex items-center gap-2">
@@ -131,16 +150,25 @@ export function SiteHeader() {
             aria-label="Mobile"
             className="flex flex-col gap-6 px-6 py-8"
           >
-            {navItems.map((item) => (
-              <a
-                key={item.id}
-                href={`#${item.id}`}
-                className="text-site-heading font-mono text-lg"
-                onClick={closeMenu}
-              >
-                {item.label}
-              </a>
-            ))}
+            {navItems.map((item) => {
+              const isActive = activeId === item.id
+
+              return (
+                <a
+                  key={item.id}
+                  href={`#${item.id}`}
+                  aria-current={isActive ? 'location' : undefined}
+                  className={`font-mono text-lg transition-colors ${
+                    isActive
+                      ? 'text-site-heading'
+                      : 'text-site-body hover:text-site-heading'
+                  }`}
+                  onClick={closeMenu}
+                >
+                  {item.label}
+                </a>
+              )
+            })}
           </nav>
         </div>
       ) : null}

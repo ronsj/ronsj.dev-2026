@@ -8,7 +8,7 @@ export function ExperienceSection() {
       className="border-site-border scroll-mt-24 border-t py-16"
     >
       <div className="mx-auto max-w-5xl px-6">
-        <SectionLabel>Experience</SectionLabel>
+        <SectionLabel sectionId="experience">Experience</SectionLabel>
 
         <div className="divide-site-border mt-8 divide-y">
           {experience.map((role) => (
