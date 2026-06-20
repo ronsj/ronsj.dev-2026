@@ -63,3 +63,19 @@ body {
 .text-box-edge-cap-alpha {
   text-box-edge: cap alphabetic;
 }
+
+.hero-accent-glow {
+  background: radial-gradient(
+    ellipse 100% 80% at 50% 100%,
+    color-mix(in srgb, var(--site-accent) 8%, transparent),
+    transparent 60%
+  );
+}
+
+.dark .hero-accent-glow {
+  background: radial-gradient(
+    ellipse 100% 80% at 50% 100%,
+    color-mix(in srgb, var(--site-accent) 4%, transparent),
+    transparent 65%
+  );
+}
