@@ -38,6 +38,20 @@ export const about = {
   ],
 }
 
+export const process = [
+  {
+    heading: 'Code: AI-assisted with human oversight.',
+    fillPercent: 25,
+    fillColor: 'accent' as const,
+  },
+  {
+    heading:
+      'Think/Plan/Review: Project structure, developer experience, system architecture, technology decisions, future maintainability.',
+    fillPercent: 75,
+    fillColor: 'accent' as const,
+  },
+]
+
 export const skills = [
   {
     category: 'Tech',
