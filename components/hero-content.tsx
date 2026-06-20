@@ -90,9 +90,9 @@ export function HeroContent({
 
       <p
         data-hero-intro
-        className="text-site-body mt-8 max-w-xl text-lg/relaxed"
+        className="text-site-body mt-8 max-w-xl text-lg/relaxed hyphens-none"
       >
-        {summary}
+        {summary.replace(/(\w)-(\w)/g, '$1\u2011$2')}
       </p>
 
       <HeroActions
