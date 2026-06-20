@@ -54,7 +54,7 @@ export const clientLogos = [
   {
     name: 'Netflix',
     logo: 'netflix',
-    url: 'https://www.netflix.com',
+    url: 'https://www.netflix.shop/',
   },
   {
     name: 'Dermaflash',
