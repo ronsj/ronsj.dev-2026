@@ -60,9 +60,19 @@ export const clientLogos = [
     url: 'https://www.dermaflash.com',
   },
   {
+    name: 'Baublebar',
+    src: '/logos/baublebar.svg',
+    url: 'https://www.baublebar.com',
+  },
+  {
     name: 'Framebridge',
-    src: '/logos/framebridge.svg',
+    src: '/logos/framebridge.png',
     url: 'https://www.framebridge.com',
+  },
+  {
+    name: 'Filson',
+    src: '/logos/filson.svg',
+    url: 'https://filson.com',
   },
   {
     name: 'Rare Beauty',
