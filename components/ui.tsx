@@ -6,12 +6,12 @@ export function SectionLabel({
   sectionId: string
 }) {
   return (
-    <p
+    <h2
       data-section-id={sectionId}
       className="text-box-trim-both text-box-edge-cap-alpha text-site-accent font-mono text-base tracking-widest uppercase"
     >
       {children}
-    </p>
+    </h2>
   )
 }
 
