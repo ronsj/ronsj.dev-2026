@@ -14,15 +14,23 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
+      testIgnore: '**/accessibility.spec.ts',
       use: { ...devices['Desktop Chrome'] },
     },
     {
       name: 'firefox',
+      testIgnore: '**/accessibility.spec.ts',
       use: { ...devices['Desktop Firefox'] },
     },
     {
       name: 'webkit',
+      testIgnore: '**/accessibility.spec.ts',
       use: { ...devices['Desktop Safari'] },
+    },
+    {
+      name: 'accessibility',
+      testMatch: '**/accessibility.spec.ts',
+      use: { ...devices['Desktop Chrome'] },
     },
   ],
   webServer: {

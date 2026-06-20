@@ -9,13 +9,16 @@ import { useActiveSection } from '@/lib/use-active-section'
 function ProcessBar({
   percent,
   variant,
+  label,
 }: {
   percent: number
   variant: 'text' | 'accent'
+  label: string
 }) {
   return (
     <div
       role="progressbar"
+      aria-label={`${label}: ${percent}%`}
       aria-valuenow={percent}
       aria-valuemin={0}
       aria-valuemax={100}
@@ -92,6 +95,7 @@ export function ProcessSection() {
               <ProcessBar
                 percent={item.fillPercent}
                 variant={item.fillColor}
+                label={item.heading}
               />
             </div>
           ))}
