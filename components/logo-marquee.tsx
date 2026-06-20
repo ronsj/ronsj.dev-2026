@@ -1,24 +1,10 @@
+import { logoComponents } from '@/components/logos'
 import { clientLogos } from '@/lib/portfolio-data'
-import type { CSSProperties } from 'react'
 
 function LogoMark({ logo }: { logo: (typeof clientLogos)[number] }) {
-  return (
-    <>
-      <img
-        src={logo.src}
-        alt=""
-        aria-hidden
-        className="logo-marquee-logo-size h-8 w-auto object-contain md:h-10"
-        loading="lazy"
-        decoding="async"
-      />
-      <span
-        aria-hidden
-        className="logo-marquee-logo absolute inset-0 block"
-        style={{ '--logo-mask': `url(${logo.src})` } as CSSProperties}
-      />
-    </>
-  )
+  const Logo = logoComponents[logo.logo]
+
+  return <Logo className="text-site-body h-8 w-auto md:h-10" />
 }
 
 function LogoRow({ ariaHidden }: { ariaHidden?: boolean }) {
@@ -28,19 +14,13 @@ function LogoRow({ ariaHidden }: { ariaHidden?: boolean }) {
         .sort((a, b) => a.name.localeCompare(b.name))
         .map((logo) => (
           <li
-            key={`${logo.src}${ariaHidden ? '-clone' : ''}`}
+            key={`${logo.logo}${ariaHidden ? '-clone' : ''}`}
             className="relative flex shrink-0 items-center"
           >
             {ariaHidden ? (
-              <a
-                href={logo.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`Visit ${logo.name}`}
-                className="relative block"
-              >
+              <span className="relative block">
                 <LogoMark logo={logo} />
-              </a>
+              </span>
             ) : (
               <a
                 href={logo.url}

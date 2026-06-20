@@ -38,78 +38,74 @@ export const about = {
   ],
 }
 
+import type { LogoId } from '@/components/logos'
+
 export const clientLogos = [
   {
     name: 'Glossier',
-    src: '/logos/glossier.svg',
+    logo: 'glossier',
     url: 'https://www.glossier.com',
   },
   {
     name: 'Shinola',
-    src: '/logos/shinola.svg',
+    logo: 'shinola',
     url: 'https://www.shinola.com',
   },
   {
     name: 'Netflix',
-    src: '/logos/netflix.svg',
+    logo: 'netflix',
     url: 'https://www.netflix.com',
   },
   {
     name: 'Dermaflash',
-    src: '/logos/dermaflash.svg',
+    logo: 'dermaflash',
     url: 'https://www.dermaflash.com',
   },
   {
     name: 'Baublebar',
-    src: '/logos/baublebar.svg',
+    logo: 'baublebar',
     url: 'https://www.baublebar.com',
   },
   {
-    name: 'Framebridge',
-    src: '/logos/framebridge.png',
-    url: 'https://www.framebridge.com',
-  },
-  {
     name: 'Filson',
-    src: '/logos/filson.svg',
+    logo: 'filson',
     url: 'https://filson.com',
   },
   {
     name: 'Rare Beauty',
-    src: '/logos/rare.svg',
+    logo: 'rare',
     url: 'https://www.rarebeauty.com',
   },
   {
     name: 'Society6',
-    src: '/logos/society6.svg',
+    logo: 'society6',
     url: 'https://www.society6.com',
   },
-  { name: 'SYRN', src: '/logos/syrn.svg', url: 'https://www.syrn.com' },
-  { name: 'Haus', src: '/logos/haus.svg', url: 'https://www.hauslabs.com' },
+  { name: 'SYRN', logo: 'syrn', url: 'https://www.syrn.com' },
+  { name: 'Haus', logo: 'haus', url: 'https://www.hauslabs.com' },
   {
     name: 'Magic Spoon',
-    src: '/logos/magicspoon.svg',
+    logo: 'magicspoon',
     url: 'https://magicspoon.com',
   },
   {
     name: 'Barnes & Noble',
-    src: '/logos/barnesnoble.svg',
+    logo: 'barnesnoble',
     url: 'https://www.barnesandnoble.com',
   },
-  { name: 'Skims', src: '/logos/skims.svg', url: 'https://skims.com' },
-  { name: 'MoMA', src: '/logos/moma.svg', url: 'https://store.moma.org' },
-  {
-    name: 'Psycho Bunny',
-    src: '/logos/psychobunny.svg',
-    url: 'https://www.psychobunny.com',
-  },
+  { name: 'Skims', logo: 'skims', url: 'https://skims.com' },
+  { name: 'MoMA', logo: 'moma', url: 'https://store.moma.org' },
   {
     name: "Peet's Coffee",
-    src: '/logos/peets.svg',
+    logo: 'peets',
     url: 'https://www.peets.com',
   },
-  { name: 'Indigo', src: '/logos/indigo.svg', url: 'https://www.indigo.ca' },
-] as const
+  { name: 'Indigo', logo: 'indigo', url: 'https://www.indigo.ca' },
+] as const satisfies ReadonlyArray<{
+  name: string
+  logo: LogoId
+  url: string
+}>
 
 export const process = [
   {
