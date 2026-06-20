@@ -24,21 +24,6 @@ export function HeroActions({ github, linkedin, figma }: HeroActionsProps) {
 
       const mm = gsap.matchMedia()
 
-      mm.add('(prefers-reduced-motion: no-preference)', () => {
-        gsap.from(buttons, {
-          opacity: 0,
-          y: 24,
-          duration: 1,
-          stagger: 0.08,
-          ease: 'power2.out',
-          delay: 0.2,
-        })
-      })
-
-      mm.add('(prefers-reduced-motion: reduce)', () => {
-        gsap.set(buttons, { opacity: 1, y: 0 })
-      })
-
       mm.add(
         '(hover: hover) and (prefers-reduced-motion: no-preference)',
         () => {
