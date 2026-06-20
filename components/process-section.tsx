@@ -1,103 +1,35 @@
-'use client'
-
-import { useEffect, useRef } from 'react'
-import gsap from 'gsap'
-import { SectionLabel } from '@/components/ui'
 import { process } from '@/lib/portfolio-data'
-import { useActiveSection } from '@/lib/use-active-section'
-
-function ProcessBar({
-  percent,
-  variant,
-  label,
-}: {
-  percent: number
-  variant: 'text' | 'accent'
-  label: string
-}) {
-  return (
-    <div
-      role="progressbar"
-      aria-label={`${label}: ${percent}%`}
-      aria-valuenow={percent}
-      aria-valuemin={0}
-      aria-valuemax={100}
-      className="bg-site-surface mt-4 h-2 w-full overflow-hidden rounded-full"
-    >
-      <div
-        data-process-fill
-        data-target-percent={percent}
-        className={`h-full rounded-full ${
-          variant === 'text' ? 'bg-site-body' : 'bg-site-accent'
-        }`}
-        style={{ width: 0 }}
-      />
-    </div>
-  )
-}
+import { SectionLabel } from '@/components/ui'
 
 export function ProcessSection() {
-  const containerRef = useRef<HTMLDivElement>(null)
-  const hasAnimatedRef = useRef(false)
-  const activeId = useActiveSection()
-
-  useEffect(() => {
-    if (activeId !== 'process' || hasAnimatedRef.current) return
-
-    const fills = containerRef.current?.querySelectorAll('[data-process-fill]')
-    if (!fills?.length) return
-
-    hasAnimatedRef.current = true
-
-    const prefersReducedMotion = window.matchMedia(
-      '(prefers-reduced-motion: reduce)'
-    ).matches
-
-    if (prefersReducedMotion) {
-      fills.forEach((fill) => {
-        gsap.set(fill, {
-          width: `${(fill as HTMLElement).dataset.targetPercent}%`,
-        })
-      })
-      return
-    }
-
-    gsap.fromTo(
-      fills,
-      { width: '0%' },
-      {
-        width: (index, target) =>
-          `${(target as HTMLElement).dataset.targetPercent}%`,
-        duration: 0.8,
-        ease: 'power2.out',
-        stagger: 0.15,
-      }
-    )
-  }, [activeId])
-
   return (
     <section
       id="process"
       className="border-site-border scroll-mt-24 border-t py-16"
     >
-      <div
-        ref={containerRef}
-        className="mx-auto max-w-5xl px-6"
-      >
+      <div className="mx-auto max-w-5xl px-6">
         <SectionLabel sectionId="process">Process</SectionLabel>
 
-        <div className="mt-8 flex flex-col gap-8">
+        <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-3">
           {process.map((item) => (
-            <div key={item.heading}>
-              <h3 className="text-site-body text-base/relaxed">
-                {item.heading}
-              </h3>
-              <ProcessBar
-                percent={item.fillPercent}
-                variant={item.fillColor}
-                label={item.heading}
+            <article
+              key={item.label}
+              className="border-site-border bg-site-surface relative overflow-hidden rounded-md border p-6"
+            >
+              <div
+                aria-hidden
+                className="card-accent-glow pointer-events-none absolute inset-0 z-0"
               />
-            </div>
+
+              <div className="relative z-10">
+                <h3 className="text-site-heading font-sans text-base font-medium">
+                  {item.label}
+                </h3>
+                <p className="text-site-body mt-3 text-sm/relaxed">
+                  {item.description}
+                </p>
+              </div>
+            </article>
           ))}
         </div>
       </div>

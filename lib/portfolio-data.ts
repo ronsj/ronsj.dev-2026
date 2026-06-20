@@ -113,17 +113,19 @@ export const clientLogos = [
 
 export const process = [
   {
-    heading: 'Code: AI-assisted with human oversight.',
-    fillPercent: 25,
-    fillColor: 'accent' as const,
+    label: 'Communicating',
+    description: 'With stakeholders, designers, users, and other developers.',
   },
   {
-    heading:
-      'Think/Plan/Review: Project structure, developer experience, system architecture, technology decisions, future maintainability.',
-    fillPercent: 75,
-    fillColor: 'accent' as const,
+    label: 'Thinking & Planning',
+    description:
+      'Project structure, developer experience, system architecture, technology choices, and maintainability.',
   },
-]
+  {
+    label: 'Coding',
+    description: 'AI-assisted with human oversight.',
+  },
+] as const
 
 export const skills = [
   {
