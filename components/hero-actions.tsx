@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { FigmaIcon, GitHubIcon, LinkedInIcon } from '@/components/icons'
+import { ActionLink } from '@/components/ui'
 
 gsap.registerPlugin(useGSAP)
 
@@ -65,65 +66,33 @@ export function HeroActions({ github, linkedin, figma }: HeroActionsProps) {
       ref={containerRef}
       className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center lg:gap-5"
     >
-      <HeroActionButton
+      <ActionLink
         href="#projects"
-        primary={true}
+        variant="primary"
       >
         View Projects
-      </HeroActionButton>
-      <HeroActionButton
+      </ActionLink>
+      <ActionLink
         href={github}
-        primary={false}
+        external
       >
         <GitHubIcon className="size-3.5" />
         GitHub
-      </HeroActionButton>
-      <HeroActionButton
+      </ActionLink>
+      <ActionLink
         href={linkedin}
-        primary={false}
+        external
       >
         <LinkedInIcon className="size-3.5" />
         LinkedIn
-      </HeroActionButton>
-      <HeroActionButton
+      </ActionLink>
+      <ActionLink
         href={figma}
-        primary={false}
+        external
       >
         <FigmaIcon className="size-3.5" />
         Figma
-      </HeroActionButton>
+      </ActionLink>
     </div>
-  )
-}
-
-function HeroActionButton({
-  href,
-  primary,
-  children,
-}: {
-  href: string
-  primary: boolean
-  children: React.ReactNode
-}) {
-  if (primary) {
-    return (
-      <a
-        href={href}
-        className="bg-site-accent text-site-bg hover:bg-site-heading inline-flex items-center justify-center rounded-md px-5 py-2.5 font-mono text-lg transition-colors"
-      >
-        {children}
-      </a>
-    )
-  }
-
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="border-site-border text-site-accent hover:text-site-heading inline-flex items-center justify-center gap-2 rounded-md border px-5 py-2.5 font-mono text-lg transition-colors"
-    >
-      {children}
-    </a>
   )
 }

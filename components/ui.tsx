@@ -1,3 +1,39 @@
+import type { ReactNode } from 'react'
+
+export function ActionLink({
+  href,
+  variant = 'secondary',
+  size = 'default',
+  external = false,
+  className = '',
+  children,
+}: {
+  href: string
+  variant?: 'primary' | 'secondary'
+  size?: 'default' | 'sm'
+  external?: boolean
+  className?: string
+  children: ReactNode
+}) {
+  const sizeClasses =
+    size === 'sm' ? 'gap-1.5 px-4 py-2 text-sm' : 'gap-2 px-5 py-2.5 text-lg'
+
+  const variantClasses =
+    variant === 'primary'
+      ? 'bg-site-accent text-site-bg hover:bg-site-heading'
+      : 'border-site-border text-site-accent hover:text-site-heading border'
+
+  return (
+    <a
+      href={href}
+      {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+      className={`inline-flex items-center justify-center rounded-md font-mono transition-colors ${sizeClasses} ${variantClasses} ${className}`.trim()}
+    >
+      {children}
+    </a>
+  )
+}
+
 export function SectionLabel({
   children,
   sectionId,

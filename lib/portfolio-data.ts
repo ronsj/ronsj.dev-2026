@@ -103,7 +103,14 @@ export const projects = [
     title: "Peet's Coffee",
     description:
       'Built dynamic product and landing page templates on Shopify/Liquid, focused on retail and subscription conversion flows.',
-    tags: ['Shopify', 'E-Commerce', 'Liquid', 'JavaScript', 'APIs'],
+    tags: [
+      'Shopify',
+      'E-Commerce',
+      'Liquid',
+      'JavaScript',
+      'API Integrations',
+      'Animations',
+    ],
     link: {
       type: 'website',
       url: 'https://peets.com',
@@ -120,6 +127,7 @@ export const projects = [
       'JavaScript',
       'TypeScript',
       'Vite',
+      'Animations',
     ],
     link: {
       type: 'website',
