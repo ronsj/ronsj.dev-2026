@@ -97,7 +97,7 @@ export const clientLogos = [
     url: 'https://www.barnesandnoble.com',
   },
   { name: 'Skims', src: '/logos/skims.svg', url: 'https://skims.com' },
-  { name: 'MoMA', src: '/logos/moma.svg', url: 'https://www.moma.org' },
+  { name: 'MoMA', src: '/logos/moma.svg', url: 'https://store.moma.org' },
   {
     name: 'Psycho Bunny',
     src: '/logos/psychobunny.svg',
