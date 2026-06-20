@@ -38,6 +38,69 @@ export const about = {
   ],
 }
 
+export const clientLogos = [
+  {
+    name: 'Glossier',
+    src: '/logos/glossier.svg',
+    url: 'https://www.glossier.com',
+  },
+  {
+    name: 'Shinola',
+    src: '/logos/shinola.svg',
+    url: 'https://www.shinola.com',
+  },
+  {
+    name: 'Netflix',
+    src: '/logos/netflix.svg',
+    url: 'https://www.netflix.com',
+  },
+  {
+    name: 'Dermaflash',
+    src: '/logos/dermaflash.svg',
+    url: 'https://www.dermaflash.com',
+  },
+  {
+    name: 'Framebridge',
+    src: '/logos/framebridge.svg',
+    url: 'https://www.framebridge.com',
+  },
+  {
+    name: 'Rare Beauty',
+    src: '/logos/rare.svg',
+    url: 'https://www.rarebeauty.com',
+  },
+  {
+    name: 'Society6',
+    src: '/logos/society6.svg',
+    url: 'https://www.society6.com',
+  },
+  { name: 'SYRN', src: '/logos/syrn.svg', url: 'https://www.syrn.com' },
+  { name: 'Haus', src: '/logos/haus.svg', url: 'https://www.hauslabs.com' },
+  {
+    name: 'Magic Spoon',
+    src: '/logos/magicspoon.svg',
+    url: 'https://magicspoon.com',
+  },
+  {
+    name: 'Barnes & Noble',
+    src: '/logos/barnesnoble.svg',
+    url: 'https://www.barnesandnoble.com',
+  },
+  { name: 'Skims', src: '/logos/skims.svg', url: 'https://skims.com' },
+  { name: 'MoMA', src: '/logos/moma.svg', url: 'https://www.moma.org' },
+  {
+    name: 'Psycho Bunny',
+    src: '/logos/psychobunny.svg',
+    url: 'https://www.psychobunny.com',
+  },
+  {
+    name: "Peet's Coffee",
+    src: '/logos/peets.svg',
+    url: 'https://www.peets.com',
+  },
+  { name: 'Indigo', src: '/logos/indigo.svg', url: 'https://www.indigo.ca' },
+] as const
+
 export const process = [
   {
     heading: 'Code: AI-assisted with human oversight.',

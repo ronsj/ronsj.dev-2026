@@ -1,3 +1,4 @@
+import { LogoMarquee } from '@/components/logo-marquee'
 import { projects } from '@/lib/portfolio-data'
 import { ExternalLinkIcon } from '@/components/icons'
 import { ActionLink, SectionLabel, TagList } from '@/components/ui'
@@ -50,6 +51,8 @@ export function ProjectsSection() {
           ))}
         </div>
       </div>
+
+      <LogoMarquee className="mt-16" />
     </section>
   )
 }
