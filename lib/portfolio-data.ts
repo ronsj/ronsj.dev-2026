@@ -114,16 +114,18 @@ export const clientLogos = [
 export const process = [
   {
     label: 'Communicating',
-    description: 'With stakeholders, designers, users, and other developers.',
+    description:
+      'Talking with stakeholders, designers, users, and other developers. Ensuring everyone is on the same page and aligned on the project goals and requirements.',
   },
   {
     label: 'Thinking & Planning',
     description:
-      'Project structure, developer experience, system architecture, technology choices, and maintainability.',
+      'Thinking about the project structure, developer experience, system architecture, technology choices, and maintainability.',
   },
   {
     label: 'Coding',
-    description: 'AI-assisted with human oversight.',
+    description:
+      'Using AI-assisted tools with human oversight. Breaking down problems into smaller, manageable chunks for agents to understand and implement.',
   },
 ] as const
 
