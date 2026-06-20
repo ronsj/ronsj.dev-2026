@@ -79,3 +79,19 @@ body {
     transparent 65%
   );
 }
+
+.card-accent-glow {
+  background: radial-gradient(
+    ellipse 100% 100% at 100% 100%,
+    color-mix(in srgb, var(--site-accent) 12%, var(--site-surface)),
+    transparent 75%
+  );
+}
+
+.dark .card-accent-glow {
+  background: radial-gradient(
+    ellipse 100% 100% at 100% 100%,
+    color-mix(in srgb, var(--site-accent) 8%, var(--site-surface)),
+    transparent 75%
+  );
+}

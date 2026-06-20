@@ -15,29 +15,36 @@ export function ProjectsSection() {
           {projects.map((project) => (
             <article
               key={project.title}
-              className="border-site-border bg-site-surface flex flex-col rounded-md border p-6"
+              className="border-site-border bg-site-surface relative overflow-hidden rounded-md border p-6"
             >
-              <h3 className="text-site-heading font-sans text-base font-medium">
-                {project.title}
-              </h3>
+              <div
+                aria-hidden
+                className="card-accent-glow pointer-events-none absolute inset-0 z-0"
+              />
 
-              <p className="text-site-body mt-3 text-sm/relaxed">
-                {project.description}
-              </p>
+              <div className="relative z-10 flex flex-col">
+                <h3 className="text-site-heading font-sans text-base font-medium">
+                  {project.title}
+                </h3>
 
-              <div className="mt-4">
-                <TagList tags={project.tags} />
-              </div>
+                <p className="text-site-body mt-3 text-sm/relaxed">
+                  {project.description}
+                </p>
 
-              <div className="mt-auto self-start pt-4">
-                <ActionLink
-                  href={project.link.url}
-                  external
-                  size="sm"
-                >
-                  View {project.link.type === 'repo' ? 'Repo' : 'Site'}
-                  <ExternalLinkIcon className="size-3.5" />
-                </ActionLink>
+                <div className="mt-4">
+                  <TagList tags={project.tags} />
+                </div>
+
+                <div className="mt-auto self-start pt-4">
+                  <ActionLink
+                    href={project.link.url}
+                    external
+                    size="sm"
+                  >
+                    View {project.link.type === 'repo' ? 'Repo' : 'Site'}
+                    <ExternalLinkIcon className="size-3.5" />
+                  </ActionLink>
+                </div>
               </div>
             </article>
           ))}
