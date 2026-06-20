@@ -64,6 +64,14 @@ body {
   text-box-edge: cap alphabetic;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  html.has-js [data-hero-intro],
+  html.has-js [data-hero-actions] a {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0);
+  }
+}
+
 .hero-accent-glow {
   background: radial-gradient(
     ellipse 100% 80% at 50% 100%,

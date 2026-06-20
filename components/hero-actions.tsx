@@ -64,6 +64,7 @@ export function HeroActions({ github, linkedin, figma }: HeroActionsProps) {
   return (
     <div
       ref={containerRef}
+      data-hero-actions
       className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center lg:gap-5"
     >
       <ActionLink

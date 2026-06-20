@@ -7,9 +7,9 @@ import { HeroActions } from '@/components/hero-actions'
 
 gsap.registerPlugin(useGSAP)
 
-const introFrom = {
-  opacity: 0,
-  y: 24,
+const introTo = {
+  autoAlpha: 1,
+  y: 0,
   duration: 1,
   ease: 'power2.out' as const,
   delay: 0.2,
@@ -38,19 +38,21 @@ export function HeroContent({
     () => {
       const introElements =
         containerRef.current?.querySelectorAll('[data-hero-intro]')
-      const buttons = containerRef.current?.querySelectorAll('a')
+      const buttons = containerRef.current?.querySelectorAll(
+        '[data-hero-actions] a'
+      )
       if (!introElements?.length && !buttons?.length) return
 
       const mm = gsap.matchMedia()
 
       mm.add('(prefers-reduced-motion: no-preference)', () => {
         if (introElements?.length) {
-          gsap.from(introElements, introFrom)
+          gsap.to(introElements, introTo)
         }
 
         if (buttons?.length) {
-          gsap.from(buttons, {
-            ...introFrom,
+          gsap.to(buttons, {
+            ...introTo,
             stagger: 0.2,
           })
         }
@@ -62,7 +64,7 @@ export function HeroContent({
           ...(buttons ? Array.from(buttons) : []),
         ]
         if (targets.length) {
-          gsap.set(targets, { opacity: 1, y: 0 })
+          gsap.set(targets, { autoAlpha: 1, y: 0 })
         }
       })
 
