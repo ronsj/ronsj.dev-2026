@@ -24,7 +24,7 @@ export const hero = {
 
 export const about = {
   paragraphs: [
-    `I'm a frontend engineer who likes the full lifecycle of a project: understanding the problem, making technical calls, and getting something live that people actually use. I've spent most of my career on e-commerce and content-rich products, making UI decisions and performance improvements that have a real impact.`,
+    `I'm a frontend engineer who can participate in the full lifecycle of a project: understanding the problem, making technical calls, working with designer, and getting something live that people actually use. I've spent most of my career on e-commerce and content-rich products, making UI decisions and performance improvements that have a real impact.`,
     `My personal stack centers on React, TypeScript, and Next.js, with solid Node.js experience when the work calls for it. I care about usability, accessibility, developer experience, and shipping tested code that holds up long-term.`,
   ],
   stats: [
@@ -40,7 +40,7 @@ export const about = {
 
 export const skills = [
   {
-    category: 'Core',
+    category: 'Tech',
     items: [
       'TypeScript',
       'JavaScript',
@@ -55,28 +55,31 @@ export const skills = [
       'CSS',
       'PHP',
       'Git',
-    ],
-  },
-  {
-    category: 'Exerpienced',
-    items: [
-      'AI-assisted workflows',
+      'Cursor',
+      'Claude Code',
+      'GSAP',
       'Express.js',
-      'RESTful APIs',
-      'GraphQL',
       'Vite',
       'Docker',
-      'Vitest',
-      'Testing Library',
-      'Playwright',
-      'CI/CD',
-      'Prisma',
-      'Drizzle',
-      'PostgreSQL',
     ],
   },
   {
-    category: 'Design Tools',
+    category: 'Topics',
+    items: [
+      'AI-assisted workflows',
+      'Frontend Frameworks',
+      'Frontend Tooling',
+      'Core Web Vitals',
+      'Accessibility',
+      'RESTful APIs',
+      'GraphQL',
+      'Unit Testing',
+      'E2E Testing',
+      'CI/CD',
+    ],
+  },
+  {
+    category: 'Design',
     items: ['Figma', 'Photoshop', 'Illustrator'],
   },
 ]
