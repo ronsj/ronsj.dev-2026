@@ -16,7 +16,7 @@ export const hero = {
   label: 'Frontend Engineer',
   name: myName,
   summary:
-    'Frontend engineer specializing in polished, production-grade interfaces for e-commerce, CMS platforms, and AI-enabled products.',
+    'Specializing in polished, production-grade interfaces for e-commerce, CMS platforms, and AI-enabled products.',
   github: githubUrl,
   linkedin: linkedinUrl,
   figma: figmaUrl,
@@ -54,13 +54,13 @@ export const skills = [
       'Sass',
       'CSS',
       'PHP',
+      'Git',
     ],
   },
   {
     category: 'Exerpienced',
     items: [
       'AI-assisted workflows',
-      'Git',
       'Express.js',
       'RESTful APIs',
       'GraphQL',
