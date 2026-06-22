@@ -17,16 +17,15 @@ const playfairDisplay = Playfair_Display({
   subsets: ['latin'],
   weight: ['700'],
   adjustFontFallback: true,
-  display: 'optional',
-  preload: false,
+  display: 'swap',
 })
 
 const jetBrainsMono = JetBrains_Mono({
   variable: '--font-jetbrains-mono',
   subsets: ['latin'],
   weight: ['400'],
-  display: 'optional',
-  preload: false,
+  adjustFontFallback: true,
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
