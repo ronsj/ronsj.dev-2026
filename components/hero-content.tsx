@@ -1,19 +1,4 @@
-'use client'
-
-import { useRef } from 'react'
-import gsap from 'gsap'
-import { useGSAP } from '@gsap/react'
 import { HeroActions } from '@/components/hero-actions'
-
-gsap.registerPlugin(useGSAP)
-
-const introTo = {
-  autoAlpha: 1,
-  y: 0,
-  duration: 1,
-  ease: 'power2.out' as const,
-  delay: 0.2,
-}
 
 type HeroContentProps = {
   label: string
@@ -32,49 +17,8 @@ export function HeroContent({
   linkedin,
   figma,
 }: HeroContentProps) {
-  const containerRef = useRef<HTMLDivElement>(null)
-
-  useGSAP(
-    () => {
-      const introElements =
-        containerRef.current?.querySelectorAll('[data-hero-intro]')
-      const buttons = containerRef.current?.querySelectorAll(
-        '[data-hero-actions] a'
-      )
-      if (!introElements?.length && !buttons?.length) return
-
-      const mm = gsap.matchMedia()
-
-      mm.add('(prefers-reduced-motion: no-preference)', () => {
-        if (introElements?.length) {
-          gsap.to(introElements, introTo)
-        }
-
-        if (buttons?.length) {
-          gsap.to(buttons, {
-            ...introTo,
-            stagger: 0.2,
-          })
-        }
-      })
-
-      mm.add('(prefers-reduced-motion: reduce)', () => {
-        const targets = [
-          ...(introElements ? Array.from(introElements) : []),
-          ...(buttons ? Array.from(buttons) : []),
-        ]
-        if (targets.length) {
-          gsap.set(targets, { autoAlpha: 1, y: 0 })
-        }
-      })
-
-      return () => mm.revert()
-    },
-    { scope: containerRef }
-  )
-
   return (
-    <div ref={containerRef}>
+    <div>
       <p
         data-hero-intro
         className="text-site-accent font-mono text-sm tracking-widest uppercase"

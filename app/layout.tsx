@@ -7,17 +7,26 @@ import './globals.css'
 const inter = Inter({
   variable: '--font-inter',
   subsets: ['latin'],
+  weight: ['300', '400', '500', '800'],
+  adjustFontFallback: true,
+  display: 'swap',
 })
 
 const playfairDisplay = Playfair_Display({
   variable: '--font-playfair-display',
   subsets: ['latin'],
-  weight: ['400', '500', '700'],
+  weight: ['700'],
+  adjustFontFallback: true,
+  display: 'optional',
+  preload: false,
 })
 
 const jetBrainsMono = JetBrains_Mono({
   variable: '--font-jetbrains-mono',
   subsets: ['latin'],
+  weight: ['400'],
+  display: 'optional',
+  preload: false,
 })
 
 export const metadata: Metadata = {
