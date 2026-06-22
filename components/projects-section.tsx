@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import { LogoMarquee } from '@/components/logo-marquee'
 import { projects } from '@/lib/portfolio-data'
 import { ExternalLinkIcon } from '@/components/icons'
@@ -52,7 +53,9 @@ export function ProjectsSection() {
         </div>
       </div>
 
-      <LogoMarquee className="mt-16" />
+      <Suspense fallback={null}>
+        <LogoMarquee className="mt-16" />
+      </Suspense>
     </section>
   )
 }

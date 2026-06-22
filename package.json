@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "analyze": "next experimental-analyze",
+    "analyze:output": "next experimental-analyze --output",
     "start": "next start",
     "lint": "eslint",
     "format": "prettier --write .",

@@ -1,10 +1,10 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { navItems } from '@/lib/portfolio-data'
+import { sectionIds } from '@/lib/nav-items'
 import { HEADER_HEIGHT_PX } from '@/lib/site-layout'
 
-const sectionOrder = navItems.map((item) => item.id)
+const sectionOrder = sectionIds
 
 export function useActiveSection() {
   const [activeId, setActiveId] = useState<string | null>(null)

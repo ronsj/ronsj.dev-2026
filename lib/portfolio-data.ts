@@ -1,10 +1,4 @@
-export const navItems = [
-  { id: 'about', label: 'About' },
-  { id: 'process', label: 'Process' },
-  { id: 'skills', label: 'Skills' },
-  { id: 'projects', label: 'Projects' },
-  { id: 'experience', label: 'Experience' },
-] as const
+export { navItems } from '@/lib/nav-items'
 
 const myName = 'Ron San Jose'
 const githubUrl = 'https://github.com/ronsj'
