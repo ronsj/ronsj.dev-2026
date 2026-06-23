@@ -12,7 +12,7 @@ export function FooterSection() {
       <div className="mx-auto max-w-5xl space-y-8 px-6">
         <p className="text-site-body text-sm">{footer.tagline}</p>
 
-        <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex items-center justify-between gap-6">
           <div className="flex items-center gap-5">
             <a
               href={footer.github}
