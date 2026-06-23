@@ -9,8 +9,7 @@ const email = 'ronsj1@gmail.com'
 export const hero = {
   label: 'Frontend Engineer',
   name: myName,
-  summary:
-    'Specializing in polished, production-grade interfaces for e-commerce, CMS platforms, and AI-enabled products.',
+  summary: `Frontend engineer and UX enthusiast. Building interfaces for the web 🌐 and beyond 🤖. AI is cool too, but don't fall for the hype.`,
   github: githubUrl,
   linkedin: linkedinUrl,
   figma: figmaUrl,
@@ -18,8 +17,10 @@ export const hero = {
 
 export const about = {
   paragraphs: [
-    `I'm a frontend engineer who can participate in the full lifecycle of a project: understanding the problem, making technical calls, working with designer, and getting something live that people actually use. I've spent most of my career on e-commerce and content-rich products, making UI decisions and performance improvements that have a real impact.`,
-    `My personal stack centers on React, TypeScript, and Next.js, with solid Node.js experience when the work calls for it. I care about usability, accessibility, developer experience, and shipping tested code that holds up long-term.`,
+    `🙋‍♂️ I'm a self taught developer. I like enjoy running and single player video games. Been building sites, apps, tools, APIs, etc, for the web for over ten years.`,
+    `Writing this text in my code editor right now and it really want's me to write some generic slop.`,
+    `I'm not a computer scientist, not an expert on algorithms, or complex data structures, but I can figure out the right solutions. Google is (was?) my best friend, StackOverflow is (was?) my second best friend. These days AI also helps me get things done.`,
+    `I enjoy making high quality experiences for end users, weather they are external customer, clients, or internal teams/coworkers. My focus is getting things done right.`,
   ],
   stats: [
     { label: 'Location', value: 'Torrance, CA' },
@@ -186,7 +187,7 @@ export const projects = [
   {
     title: 'SYRN',
     description:
-      'Greenfield Shopify build. Established repo structure and build pipeline. Built out initial sections, product pages, and global patterns for the team that followed.',
+      'Established repo structure and build pipeline. Built out initial sections, product pages, and global patterns for the team that followed.',
     tags: [
       'Shopify',
       'E-Commerce',
@@ -203,8 +204,7 @@ export const projects = [
   },
   {
     title: 'Next.js Starter Kit',
-    description:
-      'Opinionated Next.js starter kit. The baseline I use to ship new projects quickly.',
+    description: `Opinionated Next.js starter kit. The baseline I use to ship new projects quickly. I don't know why I like making these so much.`,
     tags: [
       'React',
       'TypeScript',
