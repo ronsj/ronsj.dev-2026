@@ -1,10 +1,16 @@
-export { navItems } from '@/lib/nav-items'
-
 const myName = 'Ron San Jose'
 const githubUrl = 'https://github.com/ronsj'
 const linkedinUrl = 'https://linkedin.com/in/ronsanjose'
 const figmaUrl = 'https://www.figma.com/@ronsj'
 const email = 'ronsj1@gmail.com'
+
+export const navItems = [
+  { id: 'about', label: 'About' },
+  { id: 'process', label: 'Process' },
+  { id: 'skills', label: 'Skills' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'experience', label: 'Experience' },
+]
 
 export const hero = {
   label: 'Frontend Engineer',
@@ -17,7 +23,7 @@ export const hero = {
 
 export const about = {
   paragraphs: [
-    `🙋‍♂️ I'm a self taught developer. I like enjoy running and single player video games. Been building sites, apps, tools, APIs, etc, for the web for over ten years.`,
+    `🙋‍♂️ I'm a self taught developer. I like running and single player video games. Been building sites, apps, tools, APIs, etc, for the web for over ten years.`,
     `Writing this text in my code editor right now and it really want's me to write some generic slop.`,
     `I'm not a computer scientist, not an expert on algorithms, or complex data structures, but I can figure out the right solutions. Google is (was?) my best friend, StackOverflow is (was?) my second best friend. These days AI also helps me get things done.`,
     `I enjoy making high quality experiences for end users, weather they are external customer, clients, or internal teams/coworkers. My focus is getting things done right.`,

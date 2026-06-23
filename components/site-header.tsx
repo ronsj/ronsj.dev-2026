@@ -1,7 +1,7 @@
 'use client'
 
 import { useCallback, useEffect, useState } from 'react'
-import { navItems } from '@/lib/nav-items'
+import { navItems } from '@/lib/portfolio-data'
 import {
   ArrowUpIcon,
   CloseIcon,
