@@ -25,8 +25,15 @@ function buildContentSecurityPolicy(): string {
     "base-uri 'self'",
     "form-action 'self'",
     "frame-ancestors 'none'",
-    'upgrade-insecure-requests',
   ]
+
+  /**
+   * Only set upgrade-insecure-requests in production.
+   * Using this in dev caused broken tests in Safari/Webkit
+   */
+  if (!isDev) {
+    directives.push('upgrade-insecure-requests')
+  }
 
   return directives.join('; ')
 }
