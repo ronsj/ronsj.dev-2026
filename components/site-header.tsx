@@ -11,7 +11,7 @@ import {
 } from '@/components/icons'
 import { useTheme } from '@/lib/use-theme'
 import { useActiveSection } from '@/lib/use-active-section'
-import { HEADER_HEIGHT_PX } from '@/lib/site-layout'
+import { HEADER_HEIGHT_PX } from '@/lib/site'
 
 const underlineBase =
   'after:bg-site-accent relative after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-full after:origin-left after:transition-transform after:duration-300 after:ease-out motion-reduce:after:transition-none'

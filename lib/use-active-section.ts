@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { navItems } from '@/lib/portfolio-data'
-import { HEADER_HEIGHT_PX } from '@/lib/site-layout'
+import { HEADER_HEIGHT_PX } from '@/lib/site'
 
 const sectionOrder = navItems.map((item) => item.id)
 
