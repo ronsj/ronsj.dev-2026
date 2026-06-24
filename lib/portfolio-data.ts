@@ -23,10 +23,9 @@ export const hero = {
 
 export const about = {
   paragraphs: [
-    `🙋‍♂️ I'm a self taught developer. I like running and single player video games. Been building sites, apps, developer tooling, etc, for the web for over ten years.`,
-    `Writing this text in my code editor right now and it really want's me to write some generic slop.`,
-    `I'm don't pretend to be a computer scientist, am not an expert on algorithms, or complex data structures, but I can figure out the right solutions. I use all the resources available to me to get things done.`,
-    `I enjoy making high quality experiences for end users, weather they are external customer, clients, or internal teams/coworkers.`,
+    `🙋‍♂️ I'm a self taught developer. I like running 🏃 and single player video games 🎮. Been building static websites, content management systems, dynamic front end apps, and e-commerce stores, for over ten years.`,
+    `I'm not a computer scientist, but I know how to find the right solutions, am willing to learn, and will use whatever tools I need to use to get things done.`,
+    `I enjoy making high quality experiences for end users, weather they are external customer, clients, or internal teams/coworkers. I want the thing I make to be a joy to use.`,
   ],
   stats: [
     { label: 'Location', value: 'Torrance, CA' },
