@@ -15,7 +15,7 @@ export const navItems = [
 export const hero = {
   label: 'Frontend Engineer',
   name: myName,
-  summary: `Frontend engineer and UX enthusiast. Building interfaces for the web 🌐 and beyond 🤖. AI is cool too, but don't fall for the hype.`,
+  summary: `UX enthusiast, building visual and programmatic interfaces for the web 🌐 and beyond 🤖.`,
   github: githubUrl,
   linkedin: linkedinUrl,
   figma: figmaUrl,
@@ -23,10 +23,10 @@ export const hero = {
 
 export const about = {
   paragraphs: [
-    `🙋‍♂️ I'm a self taught developer. I like running and single player video games. Been building sites, apps, tools, APIs, etc, for the web for over ten years.`,
+    `🙋‍♂️ I'm a self taught developer. I like running and single player video games. Been building sites, apps, developer tooling, etc, for the web for over ten years.`,
     `Writing this text in my code editor right now and it really want's me to write some generic slop.`,
-    `I'm not a computer scientist, not an expert on algorithms, or complex data structures, but I can figure out the right solutions. Google is (was?) my best friend, StackOverflow is (was?) my second best friend. These days AI also helps me get things done.`,
-    `I enjoy making high quality experiences for end users, weather they are external customer, clients, or internal teams/coworkers. My focus is getting things done right.`,
+    `I'm don't pretend to be a computer scientist, am not an expert on algorithms, or complex data structures, but I can figure out the right solutions. I use all the resources available to me to get things done.`,
+    `I enjoy making high quality experiences for end users, weather they are external customer, clients, or internal teams/coworkers.`,
   ],
   stats: [
     { label: 'Location', value: 'Torrance, CA' },
